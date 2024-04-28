@@ -1,0 +1,55 @@
+header{
+    color: black;
+    width: 100%;
+    height: 400px;
+    background-image: url('./src/assets/images/header.webp');
+    background-size:cover;
+    background-position: 18%;
+   
+}
+header > nav{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 70px;
+}
+.menu{
+    grid-column: 3/ 13;
+    width:100%;
+    display:grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(8, 1fr);
+    
+}
+
+.menu > button{
+    background:none;
+    width: 100px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+
+.menu > button.remark{
+color: #1d4289;
+background-color: white;
+padding: 4px;
+width: 140px;
+}
+
+.logo{
+    grid-column: 1 / 3;
+    width:100%;
+    display:grid;
+    justify-items: center;
+    align-items: center;
+}
+.logo > img{
+    max-width: 150px;
+    
+}
