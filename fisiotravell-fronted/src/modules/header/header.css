@@ -1,29 +1,32 @@
-header{
+header {
     color: black;
     width: 100%;
     height: 400px;
-    background-image: url('./src/assets/images/header.webp');
-    background-size:cover;
+    background-image: url('./public/images/header.webp');
+    background-size: cover;
     background-position: 18%;
-   
+    display: flex;
+    flex-direction: column;
 }
-header > nav{
+
+header > nav {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     height: 70px;
 }
-.menu{
+
+.menu {
     grid-column: 3/ 13;
-    width:100%;
-    display:grid;
+    width: 100%;
+    display: grid;
     justify-items: center;
     align-items: center;
     grid-template-columns: repeat(8, 1fr);
-    
+
 }
 
-.menu > button{
-    background:none;
+.main-header button {
+    background: none;
     width: 100px;
     border-radius: 15px;
     border: 1px solid transparent;
@@ -33,23 +36,75 @@ header > nav{
     cursor: pointer;
     transition: border-color 0.25s;
 }
-
-
-.menu > button.remark{
-color: #1d4289;
-background-color: white;
-padding: 4px;
-width: 140px;
+.main-header button:hover {
+    text-shadow: 1px 1px 9px rgba(0,0,0,1);
 }
 
-.logo{
+
+.main-header button.remark {
+    color: #1d4289;
+    background-color: white;
+    padding: 9px 4px 6px 4px;
+    width: 140px;
+
+}
+
+.main-header button.remark:hover {
+    background-color: #1d4289;
+    color: white;
+}
+
+
+.logo {
     grid-column: 1 / 3;
-    width:100%;
-    display:grid;
+    width: 100%;
+    display: grid;
     justify-items: center;
     align-items: center;
 }
-.logo > img{
+
+.logo>img {
     max-width: 150px;
-    
+
+}
+
+header>.text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    justify-content: center;
+    width: 40%;
+    margin-left: 70px;
+    font-size: 27px;
+    max-width: 400px;
+}
+
+header>.text > h2{
+    line-height: 50px;
+}
+
+.main-header button.hero {
+    color: white;
+    background-color: #1d4289;
+    padding: 9px 4px 6px 4px;
+    width: 200px;
+}
+
+.main-header button.hero:hover {
+    background-color: #ff808b;
+    color: #1d4289;
+}
+
+@media (max-width: 1250px) {
+    .menu>button.tab {
+        display: none
+    }
+
+    .menu {
+        display: flex;
+        justify-content: end;
+        gap: 8px;
+        margin-right: 20px;
+    }
 }
