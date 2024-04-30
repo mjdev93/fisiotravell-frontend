@@ -8,7 +8,7 @@ const PASS_REGEX = /^(?=.*[a-z])(?=.*A-Z)(?=.[0-9])(?=.*[!@#&%]){8,16}$/;
 
 import React from "react";
 
-const signup = () => {
+const Signup = () => {
   const emailRef = useRef();
   const errRef = useRef();
 
@@ -71,4 +71,4 @@ const signup = () => {
   </div>;
 };
 
-export default signup;
+export default Signup;
