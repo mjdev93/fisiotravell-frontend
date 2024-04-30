@@ -33,6 +33,8 @@ header > nav {
     font-size: 14px;
     font-weight: 500;
     font-family: inherit;
+    color: white;
+    line-height: 1.5;
     cursor: pointer;
     transition: border-color 0.25s;
 }
@@ -95,6 +97,7 @@ header>.text > h2{
     background-color: #ff808b;
     color: #1d4289;
 }
+
 
 @media (max-width: 1250px) {
     .menu>button.tab {

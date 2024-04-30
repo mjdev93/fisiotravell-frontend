@@ -1,8 +1,12 @@
 import React from 'react'
+import Header from '../../components/header/Header'
 
 const NotFound = () => {
   return (
-    <div>tas to perdío</div>
+    <>
+    <Header />
+    <div>NO TENGO PAPAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAÁ</div>
+    </>
   )
 }
 
