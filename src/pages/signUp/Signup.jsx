@@ -13,19 +13,19 @@ const Signup = () => {
   const errRef = useRef();
 
   const [email, setEmail] = useState("");
-  const [validEmail, setValidEmail] = useState("false");
-  const [emailFocus, setEmailFocus] = useState("false");
+  const [validEmail, setValidEmail] = useState(false);
+  const [emailFocus, setEmailFocus] = useState(false);
 
   const [pass, setPass] = useState("");
-  const [validPass, setValidPass] = useState("false");
-  const [passFocus, setPassFocus] = useState("false");
+  const [validPass, setValidPass] = useState(false);
+  const [passFocus, setPassFocus] = useState(false);
 
   const [matchPass, setMatchPass] = useState("");
-  const [validMatch, setValidMatch] = useState("false");
-  const [matchFocus, setMatchFocus] = useState("false");
+  const [validMatch, setValidMatch] = useState(false);
+  const [matchFocus, setMatchFocus] = useState(false);
 
-  const [errMsg, setErrMsg] = useState("false");
-  const [success, setSuccess] = useState("false");
+  const [errMsg, setErrMsg] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   useEffect(() => {
     userRef.current.focus();
