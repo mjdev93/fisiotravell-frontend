@@ -5,18 +5,18 @@
 
   const SignUpHeader = () => {
     return (
-      <div className='signup'>
+      <header className='signup'>
         <nav className='signupnav'>
           <div className='logoLog'>
             <img src={logo} alt='Logo de Fisio Travell' />
           </div>
           <div className='logMenu'>
-            <button> <Link to="/" className='linkHeader'>INICIO</Link></button>
+             <Link to="/" className='linkHeader'><button>INICIO</button></Link>
             <button>PIDE CITA</button>
             <button >EMPRESAS</button>
           </div>
         </nav>
-      </div>
+      </header>
     );
   }
 
