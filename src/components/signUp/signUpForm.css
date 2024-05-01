@@ -61,34 +61,35 @@
 
 .titleLog {
   margin-bottom: 15px;
-  }
+}
 
-  .valid {
-    color: green;
-  }
+.valid {
+  color: green;
+}
 
-  .invalid {
-    color: red;
-  }
+.invalid {
+  color: red;
+}
 
-  .instructions {
-    font-size: 0.75rem;
-    border-radius: 0.5rem;
-    background: #000;
-    color: #fff;
-    padding: 0.25rem;
-    position: relative;
-    bottom: -10px;
+.instructions {
+  font-size: 0.75rem;
+  border-radius: 0.5rem;
+  background: #000;
+  color: #fff;
+  padding: 0.25rem;
+  position: relative;
+  bottom: -10px;
 }
 
 .instructions > svg {
-    margin-right: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .hide {
- display: none;}
+  display: none;
+}
 
- .asterisk {
+.asterisk {
   position: relative;
 }
 
@@ -109,4 +110,57 @@
 .required {
   font-size: 10px;
   color: red;
+}
+
+.successContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.successRegister {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.successIcon {
+  font-size: 64px;
+  color: #1d4289;
+}
+
+.successIcon{
+  max-width: 150px;
+  max-height: 150px;
+  margin-bottom: 20px;
+}
+
+.successButton {
+  margin-top: auto;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  background-color: #1d4289;
+  width: 200px;
+}
+
+.successButton:hover {
+  background-color: #ff808b;
+}
+
+.successButton a {
+  color: white;
+  text-decoration: none;
 }
