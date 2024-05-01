@@ -24,6 +24,7 @@
 
 .loginBox form label {
   margin-bottom: 5px;
+  margin-top: 10px;
 }
 
 .buttonContainer {
@@ -57,6 +58,9 @@
   border-radius: 15px;
   margin-top: 10px;
   margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
 }
 
 .titleLog {
@@ -147,7 +151,7 @@
   margin-top: auto;
   padding: 10px 20px;
   border: none;
-  border-radius: 5px;
+  border-radius: 15px;
   font-size: 16px;
   cursor: pointer;
   text-decoration: none;
