@@ -1,11 +1,11 @@
 import React from 'react'
 import SignUpForm from '../../components/signUp/SignUpForm'
-import Header from '../../components/header/Header'
+import SignUpHeader from '../../components/signUpHeader/SignUpHeader'
 
 const SignUp = () => {
   return (
     <>
-    <Header/>
+    <SignUpHeader/>
     <SignUpForm/>
     </>
   )
