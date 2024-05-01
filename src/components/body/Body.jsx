@@ -8,7 +8,13 @@ function Body() {
         <>
             <main>
                 <section className='empresa'>
-                    <article className='empresaLeft'></article>
+                    <article className='empresaLeft'>
+                        <div className='containerLeft'> 
+                            <h2 className='titleLeft'>¿Eres una empresa?</h2>
+                            <p className='textLeft'>Te ofrecemos fisioterapia preventiva y actuación para disminuir el ausentismo laboral, reducir el tiempo de recuperación de tus empleados y daros un valor añadido.</p>
+                            <button className='info'>+ INFO</button>
+                        </div>
+                    </article>
                     <article className='empresaRigth'>
 
                         <div className='containerRigth'>
