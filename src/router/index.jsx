@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/home/Home.jsx";
 import NotFound from "../pages/notFound/NotFound.jsx";
 import { Login } from "../pages/logIn/Login.jsx";
-//import Signup from "../pages/signUp/Signup";
+import Signup from "../pages/signUp/Signup";
 
 const router = createBrowserRouter([
   {
@@ -17,11 +17,11 @@ const router = createBrowserRouter([
     path: "/login",
     element: <Login />,
   },
-  /*   {
-    path: "/signup"
+    {
+    path: "/signup",
     element: <Signup/>
   },
-  {
+  /*{
             path: '/profile/:userId',
             element: <Profile />
           },
