@@ -1,8 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Home from "../pages/home/Home.jsx";
 import NotFound from "../pages/notFound/NotFound.jsx";
-import Signup from "../components/signUp/Signup.jsx";
 import Login from "../components/logIn/Login.jsx";
+import Register from "../pages/Register/SignUp.jsx";
 
 const router = createBrowserRouter([
   {
@@ -19,7 +19,7 @@ const router = createBrowserRouter([
   },
     {
     path: "/signup",
-    element: <Signup/>
+    element: <Register/>
   },
   /*{
             path: '/profile/:userId',

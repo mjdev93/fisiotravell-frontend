@@ -1,5 +1,5 @@
 import { useEffect, useState, useRef } from "react";
-import "./signup.css";
+import "./signUpForm.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCheck,
@@ -13,7 +13,7 @@ import React from "react";
 const EMAIL_REGEX = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
 const PASS_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
-const Signup = () => {
+const SignUpForm = () => {
   const emailRef = useRef();
   const errRef = useRef();
 
@@ -104,10 +104,10 @@ const Signup = () => {
             }
           >
             <FontAwesomeIcon icon={faCircleExclamation} />
-            Debe tener entre 8 y 24 caracteres. <br/>
-            Debe contener al menos minúscula, una mayúscula, un número y un símbolo. <br/>
-            Símbolos permitidos: !@#$% <br/>
-
+            Debe tener entre 8 y 24 caracteres. <br />
+            Debe contener al menos minúscula, una mayúscula, un número y un
+            símbolo. <br />
+            Símbolos permitidos: !@#$% <br />
           </p>
         </form>
         <form>
@@ -156,4 +156,4 @@ const Signup = () => {
   );
 };
 
-export default Signup;
+export default SignUpForm;
