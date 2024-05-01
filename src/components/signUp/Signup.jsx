@@ -1,12 +1,16 @@
 import { useEffect, useState, useRef } from "react";
 import "./signup.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
+import {
+  faCheck,
+  faXmark,
+  faCircleExclamation,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 import React from "react";
 
-const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const EMAIL_REGEX = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
 const PASS_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 const Signup = () => {
@@ -74,6 +78,8 @@ const Signup = () => {
             required
             onFocus={() => setEmailFocus(true)}
             onBlur={() => setEmailFocus(false)}
+            aria-invalid={validEmail ? "false" : "true"}
+            aria-describedby="emailnote"
           />
         </form>
         <form>
@@ -92,11 +98,24 @@ const Signup = () => {
             onFocus={() => setPassFocus(true)}
             onBlur={() => setPassFocus(false)}
           />
+          <p
+            className={
+              !validPass && passFocus && pass ? "instructions" : "hide"
+            }
+          >
+            <FontAwesomeIcon icon={faCircleExclamation} />
+            Debe tener entre 8 y 24 caracteres. <br/>
+            Debe contener al menos minúscula, una mayúscula, un número y un símbolo. <br/>
+            Símbolos permitidos: !@#$% <br/>
+
+          </p>
         </form>
         <form>
           <label htmlFor="password">
             Confirme la contraseña:
-            {validMatch && matchPass && <FontAwesomeIcon icon={faCheck} className="valid" />}
+            {validMatch && matchPass && (
+              <FontAwesomeIcon icon={faCheck} className="valid" />
+            )}
             {!validMatch && matchPass && (
               <FontAwesomeIcon icon={faXmark} className="invalid" />
             )}
@@ -110,9 +129,18 @@ const Signup = () => {
             onFocus={() => setMatchFocus(true)}
             onBlur={() => setMatchFocus(false)}
           />
+          <p
+            className={
+              !validMatch && matchFocus && matchPass ? "instructions" : "hide"
+            }
+          >
+            <FontAwesomeIcon icon={faCircleExclamation} />
+            Las contraseñas no coinciden.
+          </p>
         </form>
         <span className="buttonContainer">
-          <button className="logButton"
+          <button
+            className="logButton"
             disabled={!validEmail || !validPass || !validMatch ? true : false}
           >
             Registrarse
