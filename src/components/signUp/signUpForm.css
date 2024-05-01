@@ -1,0 +1,89 @@
+.loginContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.loginBox form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+
+.loginBox form label {
+  margin-bottom: 5px;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center; 
+}
+
+.logButton:enabled {
+  background: #1d4289;
+  width: 100px;
+  border-radius: 15px;
+  border: 1px solid transparent;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  line-height: 1.5;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  transition: background-color 0.25s, color 0.25s, border-color 0.25s;
+}
+
+.logButton:enabled:hover {
+  background-color: #ff808b;
+}
+
+.logButton:disabled {
+  background-color: none;
+  color: #1d4289;
+  width: 100px;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.titleLog {
+  margin-bottom: 15px;
+  }
+
+  .valid {
+    color: green;
+  }
+
+  .invalid {
+    color: red;
+  }
+
+  .instructions {
+    font-size: 0.75rem;
+    border-radius: 0.5rem;
+    background: #000;
+    color: #fff;
+    padding: 0.25rem;
+    position: relative;
+    bottom: -10px;
+}
+
+.instructions > svg {
+    margin-right: 0.25rem;
+}
+
+.hide {
+ display: none;}
