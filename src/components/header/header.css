@@ -13,6 +13,7 @@ header > nav {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     height: 70px;
+    padding-top: 15px;
 }
 
 .menu {
@@ -91,6 +92,7 @@ header>.text > h2{
     background-color: #1d4289;
     padding: 9px 4px 6px 4px;
     width: 200px;
+    margin-top: 15px;
 }
 
 .main-header button.hero:hover {
