@@ -1,7 +1,11 @@
 import './header.css'
 import logo from '/images/logofisiotravell-blanco.webp'
+<<<<<<< HEAD
 import { Link } from 'react-router-dom';
 
+=======
+import { Link } from 'react-router-dom'
+>>>>>>> Jaime
 function Header() {
 
 
@@ -21,9 +25,13 @@ function Header() {
             <button className='videos tab'>VÍDEOS</button>
             <button className='cita remark'>PIDE CITA</button>
             <button className='empresas remark'>EMPRESAS</button>
+<<<<<<< HEAD
             <Link to="/login">
             <button className='login remark'>PERFIL</button>
             </Link>
+=======
+            <button className='login remark'><Link to="/signup" className='linkHeader'>ACCEDER</Link></button>
+>>>>>>> Jaime
           </section>
         </nav>
         <section className='text'>

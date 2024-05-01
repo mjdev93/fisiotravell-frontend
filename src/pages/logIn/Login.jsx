@@ -1,14 +1,14 @@
 import React from 'react'
-import SignUpForm from '../../components/signUp/SignUpForm'
 import SignUpHeader from '../../components/signUpHeader/SignUpHeader'
+import LoginForm from '../../components/logInForm/LoginForm'
 
-const SignUp = () => {
+const Login = () => {
   return (
     <>
     <SignUpHeader/>
-    <SignUpForm/>
+    <LoginForm/>
     </>
   )
 }
 
-export default SignUp
+export default Login

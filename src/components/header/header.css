@@ -101,6 +101,8 @@ header>.text > h2{
 }
 
 
+
+
 @media (max-width: 1250px) {
     .menu>button.tab {
         display: none
