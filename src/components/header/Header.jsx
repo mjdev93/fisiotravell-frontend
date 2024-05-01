@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './header.css'
 import logo from '/images/logofisiotravell-blanco.webp'
+import { Link } from 'react-router-dom'
 function Header() {
 
   return (
@@ -18,7 +19,7 @@ function Header() {
             <button className='videos tab'>VÍDEOS</button>
             <button className='cita remark'>PIDE CITA</button>
             <button className='empresas remark'>EMPRESAS</button>
-            <button className='login remark'>PERFIL</button>
+            <button className='login remark'><Link to="/signup" className='linkHeader'>ACCEDER</Link></button>
           </section>
         </nav>
         <section className='text'>
