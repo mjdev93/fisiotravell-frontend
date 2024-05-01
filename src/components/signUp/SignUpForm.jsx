@@ -10,12 +10,28 @@ import { Link } from "react-router-dom";
 
 import React from "react";
 
+const USER_REGEX = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ ]{3,30}$/;
+const LASTNAME_REGEX = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ ]{3,30}$/;
+const PHONE_REGEX = /^\d{9}$/; 
+
 const EMAIL_REGEX = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
 const PASS_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 
 const SignUpForm = () => {
   const emailRef = useRef();
   const errRef = useRef();
+
+  const [user, setUser] = useState("");
+  const [validUser, setValidUser] = useState(false);
+  const [userFocus, setUserFocus] = useState(false);
+
+  const [lastName, setLastName] = useState("");
+  const [validlastName, setValidLastName] = useState(false);
+  const [lastNameFocus, setLastNameFocus] = useState(false);
+
+  const [phone, setPhone] = useState("");
+  const [validPhone, setValidPhone] = useState(false);
+  const [phoneFocus, setPhoneFocus] = useState(false);
 
   const [email, setEmail] = useState("");
   const [validEmail, setValidEmail] = useState(false);
@@ -37,22 +53,33 @@ const SignUpForm = () => {
   }, []);
 
   useEffect(() => {
+    const result = USER_REGEX.test(user);
+    setValidUser(result);
+  }, [user]);
+
+  useEffect(() => {
+    const result = LASTNAME_REGEX.test(lastName);
+    setValidLastName(result);
+  }, [lastName]);
+
+  useEffect(() => {
+    const result = PHONE_REGEX.test(phone);
+    setValidPhone(result);
+  }, [phone]);
+
+  useEffect(() => {
     const result = EMAIL_REGEX.test(email);
-    console.log(result);
-    console.log(email);
     setValidEmail(result);
   }, [email]);
 
   useEffect(() => {
     const result = PASS_REGEX.test(pass);
-    console.log(result);
-    console.log(pass);
     setValidPass(result);
     const match = pass === matchPass;
     setValidMatch(match);
   }, [pass, matchPass]);
 
-  useEffect(() => setErrMsg("")), [email, pass, matchPass];
+  useEffect(() => setErrMsg("")), [name, email, pass, matchPass];
 
   return (
     <div className="loginContainer">
@@ -62,7 +89,87 @@ const SignUpForm = () => {
         </p>
         <h1 className="titleLog">Registro</h1>
         <form>
-          <label htmlFor="email">
+          <label htmlFor="user" className="asterisk">
+            Nombre:
+            {validUser && <FontAwesomeIcon icon={faCheck} className="valid" />}
+            {!validUser && user && (
+              <FontAwesomeIcon icon={faXmark} className="invalid" />
+            )}
+          </label>
+          <input
+            type="text"
+            id="name"
+            onChange={(e) => setUser(e.target.value)}
+            required
+            onFocus={() => setUserFocus(true)}
+            onBlur={() => setUserFocus(false)}
+          />
+          <p
+            className={
+              !validUser && userFocus && user ? "instructions" : "hide"
+            }
+          >
+            <FontAwesomeIcon icon={faCircleExclamation} />
+            Debe tener mínimo tres letras. <br />
+          </p>
+        </form>
+
+        <form>
+          <label htmlFor="lastName">
+            Apellidos:
+            {validlastName && (
+              <FontAwesomeIcon icon={faCheck} className="valid" />
+            )}
+            {!validlastName && lastName && (
+              <FontAwesomeIcon icon={faXmark} className="invalid" />
+            )}
+          </label>
+          <input
+            type="text"
+            id="lastName"
+            onChange={(e) => setLastName(e.target.value)}
+            onFocus={() => setLastNameFocus(true)}
+            onBlur={() => setLastNameFocus(false)}
+          />
+          <p
+            className={
+              !validlastName && lastNameFocus && lastName
+                ? "instructions"
+                : "hide"
+            }
+          >
+            <FontAwesomeIcon icon={faCircleExclamation} />
+            Debe tener mínimo tres letras. <br />
+          </p>
+        </form>
+        <form>
+          <label htmlFor="phone">
+            Teléfono:
+            {validPhone && <FontAwesomeIcon icon={faCheck} className="valid" />}
+            {!validPhone && phone && (
+              <FontAwesomeIcon icon={faXmark} className="invalid" />
+            )}
+          </label>
+          <input
+            type="text"
+            id="phone"
+            onChange={(e) => setPhone(e.target.value)}
+            onFocus={() => setPhoneFocus(true)}
+            onBlur={() => setPhoneFocus(false)}
+          />
+          <p
+            className={
+              !validPhone && phoneFocus && phone
+                ? "instructions"
+                : "hide"
+            }
+          >
+            <FontAwesomeIcon icon={faCircleExclamation} />
+            Debe tener 9 dígitos.
+          </p>
+        </form>
+        <form>
+          <label htmlFor="email" className="asterisk">
             Email:
             {validEmail && <FontAwesomeIcon icon={faCheck} className="valid" />}
             {!validEmail && email && (
@@ -83,7 +190,7 @@ const SignUpForm = () => {
           />
         </form>
         <form>
-          <label htmlFor="password">
+          <label htmlFor="password" className="asterisk">
             Contraseña:
             {validPass && <FontAwesomeIcon icon={faCheck} className="valid" />}
             {!validPass && pass && (
@@ -141,15 +248,18 @@ const SignUpForm = () => {
         <span className="buttonContainer">
           <button
             className="logButton"
-            disabled={!validEmail || !validPass || !validMatch ? true : false}
+            disabled={!validEmail || !validPass || !validMatch || !validUser ? true : false}
           >
             Registrarse
           </button>
         </span>
 
         <p>¿Ya estas registrado?</p>
-        <span>
+        <span className="access">
           <Link to="/Login">Acceder</Link>
+        </span>
+        <span>
+          <p className="required">*Campos requeridos.</p>
         </span>
       </div>
     </div>

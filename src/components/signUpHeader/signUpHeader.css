@@ -42,3 +42,7 @@
     background-color: rgba(255, 255, 255, 0.2);
   }
   
+  .linkHeader:visited {
+    text-decoration: none;
+    color: inherit;
+  }
