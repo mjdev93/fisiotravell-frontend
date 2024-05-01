@@ -8,7 +8,6 @@
 .loginBox {
   display: flex;
   flex-direction: column;
-  margin-bottom: 10px;
   width: 300px;
   padding: 20px;
   background-color: #f9f9f9;
@@ -32,7 +31,7 @@
   justify-content: center; 
 }
 
-button:enabled {
+.logButton:enabled {
   background: #1d4289;
   width: 100px;
   border-radius: 15px;
@@ -47,11 +46,11 @@ button:enabled {
   transition: background-color 0.25s, color 0.25s, border-color 0.25s;
 }
 
-button:enabled:hover {
+.logButton:enabled:hover {
   background-color: #ff808b;
 }
 
-button:disabled {
+.logButton:disabled {
   background-color: none;
   color: #1d4289;
   width: 100px;
@@ -59,3 +58,16 @@ button:disabled {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+.titleLog {
+  margin-bottom: 15px;
+  }
+
+  .valid {
+    color: green;
+  }
+
+  .invalid {
+    color: red;
+  }
+

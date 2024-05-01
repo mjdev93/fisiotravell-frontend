@@ -1,6 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import "./signup.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCheck, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 import React from "react";
@@ -55,9 +56,15 @@ const Signup = () => {
         <p ref={errRef} className={errMsg ? "errmsg" : "offscreen"}>
           {errMsg}
         </p>
-        <h1>Registro</h1>
+        <h1 className="titleLog">Registro</h1>
         <form>
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="email">
+            Email:
+            {validEmail && <FontAwesomeIcon icon={faCheck} className="valid" />}
+            {!validEmail && email && (
+              <FontAwesomeIcon icon={faXmark} className="invalid" />
+            )}
+          </label>
           <input
             type="email"
             id="email"
@@ -70,7 +77,13 @@ const Signup = () => {
           />
         </form>
         <form>
-          <label htmlFor="password">Contraseña:</label>
+          <label htmlFor="password">
+            Contraseña:
+            {validPass && <FontAwesomeIcon icon={faCheck} className="valid" />}
+            {!validPass && pass && (
+              <FontAwesomeIcon icon={faXmark} className="invalid" />
+            )}
+          </label>
           <input
             type="password"
             id="password"
@@ -81,7 +94,13 @@ const Signup = () => {
           />
         </form>
         <form>
-          <label htmlFor="password">Confirme la contraseña:</label>
+          <label htmlFor="password">
+            Confirme la contraseña:
+            {validMatch && matchPass && <FontAwesomeIcon icon={faCheck} className="valid" />}
+            {!validMatch && matchPass && (
+              <FontAwesomeIcon icon={faXmark} className="invalid" />
+            )}
+          </label>
           <input
             type="password"
             id="confirmPass"
@@ -92,8 +111,8 @@ const Signup = () => {
             onBlur={() => setMatchFocus(false)}
           />
         </form>
-        <span className="">
-          <button
+        <span className="buttonContainer">
+          <button className="logButton"
             disabled={!validEmail || !validPass || !validMatch ? true : false}
           >
             Registrarse
