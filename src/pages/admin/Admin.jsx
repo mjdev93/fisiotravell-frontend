@@ -1,6 +1,5 @@
 import React from 'react'
-import Table from '../../components/table/Table'
-import SearchBar from '../../components/searchBar/searchBar'
+import SearchBar from '../../components/searchBar/SearchBar'
 
 
 
@@ -8,8 +7,7 @@ import SearchBar from '../../components/searchBar/searchBar'
 const Admin = () => {
   return (
     <>
-    <div>ADMIN</div>
-    <Table/>
+    
     <SearchBar/>
     </>
   )
