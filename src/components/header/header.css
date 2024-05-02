@@ -13,6 +13,7 @@ header > nav {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     height: 70px;
+    padding-top: 15px;
 }
 
 .menu {
@@ -33,6 +34,8 @@ header > nav {
     font-size: 14px;
     font-weight: 500;
     font-family: inherit;
+    color: white;
+    line-height: 1.5;
     cursor: pointer;
     transition: border-color 0.25s;
 }
@@ -89,12 +92,16 @@ header>.text > h2{
     background-color: #1d4289;
     padding: 9px 4px 6px 4px;
     width: 200px;
+    margin-top: 15px;
 }
 
 .main-header button.hero:hover {
     background-color: #ff808b;
     color: #1d4289;
 }
+
+
+
 
 @media (max-width: 1250px) {
     .menu>button.tab {
