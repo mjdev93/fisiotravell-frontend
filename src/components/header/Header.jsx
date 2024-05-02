@@ -18,9 +18,9 @@ function Header() {
             <button className='metodologia tab'>METODOLOGÍA</button>
             <button className='equipo tab'>EL EQUIPO</button>
             <button className='articulos tab'>ARTÍCULOS</button>
-            <button className='videos tab'>VÍDEOS</button>
+            <button className='empresas tab'>EMPRESAS</button>
             <button className='cita remark'>PIDE CITA</button>
-            <button className='empresas remark'>EMPRESAS</button>
+            <button className='videos remark'>VÍDEOS</button>
             <Link to="/signup">
             <button className='login remark'>ACCEDER</button>
             </Link>
