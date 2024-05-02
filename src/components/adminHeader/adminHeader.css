@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .signup {
     display: flex;
     justify-content: space-between;
@@ -46,3 +47,11 @@
     text-decoration: none;
     color: inherit;
   }
+=======
+.justify-content-end{
+    background-color: #ff808b;
+    color: #1d4289;
+    font-family: inherit;
+    font-size: 18px;
+}
+>>>>>>> main

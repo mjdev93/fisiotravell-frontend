@@ -1,0 +1,65 @@
+.logContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.logBox {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  width: 300px;
+  text-align: center; 
+}
+
+.logContainer img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.logContainer h1 {
+  margin-bottom: 20px;
+}
+
+.logForm {
+  width: 100%; 
+}
+
+.logForm label {
+  display: block; 
+  margin-bottom: 5px;
+}
+
+.logForm input {
+  width: calc(100% - 22px); 
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box; 
+}
+
+.logForm input:focus {
+  outline: none;
+  border-color: #1d4289;
+}
+
+.logForm button {
+  font-family: inherit;
+  font-size: 16;
+  width: 120px;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  background-color: #1d4289;
+  color: white;
+  cursor: pointer;
+}
+
+.logForm button:hover {
+  background-color: #ff808b;
+}
