@@ -1,6 +1,6 @@
 import React from 'react'
 import SearchBar from '../../components/searchBar/SearchBar'
-import React from "react";
+import AdminView from '../../components/adminView/AdminView'
 
 
 
@@ -11,6 +11,7 @@ const Admin = () => {
 
     
     <SearchBar/>
+    <AdminView/>
     </>
   )
 }
