@@ -17,6 +17,7 @@ const Table = ({ data }) => {
         <tbody>
         {data.map((item) => (
 
+
         
                 <tr key={item.id} className='listData'>
                   <td>{item.nombre}</td>

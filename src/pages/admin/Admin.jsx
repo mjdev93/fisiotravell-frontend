@@ -1,15 +1,16 @@
 import React from 'react'
-// import AdminView from '../../components/adminView'
-// import AdminHeader from '../../components/adminHeader.jsx'
-// import './adminHeader.css'
+import Table from '../../components/table/Table'
+import SearchBar from '../../components/searchBar/searchBar'
+
+
 
 
 const Admin = () => {
   return (
     <>
     <div>ADMIN</div>
-    {/* <AdminHeader/>
-    <AdminView/> */}
+    <Table/>
+    <SearchBar/>
     </>
   )
 }
