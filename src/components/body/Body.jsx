@@ -1,4 +1,4 @@
-import './body.css'
+
 import {Empresa} from './sections/empresa/Empresa'
 import {Videos} from './sections/videos/Videos'
 import {Servicios} from './sections/servicios/Servicios'

@@ -8,7 +8,7 @@ export function Videos() {
 
     return (
         <>
-                <section className='videosContainer'>
+                <section className='videosContainer' id='videos'>
 
                     <img className='formita1' src={formita1} alt='Imagen tangram fisio travell' />
                     <div className='blueContainer'>

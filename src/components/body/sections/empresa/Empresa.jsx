@@ -7,7 +7,7 @@ export function Empresa() {
     return (
         <>
             
-                <section className='empresa'>
+                <section className='empresa' id='empresa'>
                     <article className='empresaLeft'>
                         <div className='containerLeft'>
                             <h2 className='titleLeft'>¿Eres una empresa?</h2>

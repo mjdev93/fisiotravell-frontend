@@ -9,12 +9,23 @@
     flex-direction: column;
 }
 
-.main-header > nav {
-    display: grid;
+.main-header>nav {
+    display: grid; 
     grid-template-columns: repeat(12, 1fr);
-    height: 70px;
+    height: 80px;
     padding-top: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    padding-bottom: 50px;
+    transition: background 0.4s;
 }
+
+.navbar-color-change {
+    background-color: rgba(255, 128, 139,0.8); 
+    backdrop-filter: blur(3px);
+  }
 
 .menu {
     grid-column: 3/ 13;
@@ -39,8 +50,9 @@
     cursor: pointer;
     transition: border-color 0.25s;
 }
+
 .main-header button:hover {
-    text-shadow: 1px 1px 9px rgba(0,0,0,1);
+    text-shadow: 1px 1px 9px rgba(0, 0, 0, 1);
 }
 
 
@@ -83,7 +95,7 @@ header>.text {
     max-width: 400px;
 }
 
-header>.text > h2{
+header>.text>h2 {
     line-height: 50px;
 }
 

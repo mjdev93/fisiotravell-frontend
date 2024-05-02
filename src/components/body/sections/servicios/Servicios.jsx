@@ -3,10 +3,11 @@ import icono from '/images/icono-hojas.webp'
 import terapeutaServicios from '/images/terapeuta-movilizacion.webp'
 
 export function Servicios() {
+    
 
     return (
         <>
-                <section className='serviciosContainer'>
+                <section className='serviciosContainer' id='servicios'>
                     <h1 className='titleServicios'>Nuestros servicios</h1>
                     <div className='nuestrosServicios'>
                         <ul className='listServices'>
