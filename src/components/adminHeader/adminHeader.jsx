@@ -1,22 +1,18 @@
-import React from 'react';
-import logo from '/images/logofisiotravell-blanco.webp';
-import './AdminHeader.css'
+import Nav from 'react-bootstrap/Nav';
+import "bootstrap/dist/css/bootstrap.css";
+import "./adminHeader.css"
 
 
-const AdminHeader = () => {
+function AdminHeader() {
   return (
-    <div className='signup'>
-      <nav className='signupnav'>
-        <div className='logoLog'>
-          <img src={logo} alt='Logo de Fisio Travell' />
-        </div>
-        <div className='logMenu'>
-          <button> <Link to="/" className='linkHeader'>INICIO</Link></button>
-          <button>PIDE CITA</button>
-          <button >EMPRESAS</button>
-        </div>
-      </nav>
-    </div>
+    <Nav variant="tabs" defaultActiveKey="/" className="justify-content-end">
+      <Nav.Item>
+        <Nav.Link href="/">INICIO</Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link eventKey="link-1">CREAR PACIENTE</Nav.Link>
+      </Nav.Item>
+        </Nav>
   );
 }
 
