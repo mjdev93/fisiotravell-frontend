@@ -1,8 +1,8 @@
 import './body.css'
 import icono from '/images/icono-hojas.webp'
-import formita1 from '/images/formitas-1.webp'
-import formita2 from '/images/formitas-2.webp'
-
+import formita1 from '/images/formita-1-der.webp'
+import formita2 from '/images/formita-1-izq.webp'
+import terapeutaServicios from '/images/terapeuta-movilizacion.webp'
 
 function Body() {
 
@@ -44,7 +44,7 @@ function Body() {
 
                 <section className='videosContainer'>
 
-                    <img className='formita1' src={formita1} alt='Imagen tangram fisio travell'/>
+                    <img className='formita1' src={formita1} alt='Imagen tangram fisio travell' />
                     <div className='blueContainer'>
 
                         <div className='carrusel'>
@@ -55,11 +55,28 @@ function Body() {
 
                     </div>
                     <div className='whiteContainer'></div>
-                    <img className='formita2' src={formita1} alt='Imagen tangram fisio travell'/>
+                    <img className='formita2' src={formita2} alt='Imagen tangram fisio travell' />
                 </section>
 
+                <section className='serviciosContainer'>
+                    <h1 className='titleServicios'>Nuestros servicios</h1>
+                    <div className='nuestrosServicios'>
+                    <ul>
+                        <li>Fisioterapia avanzada</li>
+                        <li>Ecografia</li>
+                        <li>Osteopatia</li>
+                        <li>Drenaje linfático</li>
+                        <li>Readaptación funcional</li>
+                        <li>Terapia invasiva</li>
+                        <li>Tratamientos postquirúrgicos</li>
+                        <li>Geriatria</li>
+                    </ul>
+                    <img className='terapeutaServicios' src={terapeutaServicios} alt='Imagen terapeuta haciendo una movilización a un paciente' />
+                    
+                    </div>
 
-            </main >
+                </section>
+            </main>
         </>
     )
 
