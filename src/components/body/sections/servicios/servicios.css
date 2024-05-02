@@ -29,6 +29,27 @@
     max-width: 505px;
     left:30%;
 }
+
+.verServicios{
+    position: absolute;
+    left: 40.5%;
+    bottom: -20px;
+    color: white;
+    background-image: linear-gradient(to right, #1d4289, #ff808b);
+    padding: 9px 4px 6px 4px;
+    width: 250px;
+    border-radius: 20px;
+    border: 1px solid transparent;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: opacity 0.6s;
+}
+.verServicios:hover {
+    opacity: .8;
+}
+
 .listServices{
     position: absolute;
     left:2%;

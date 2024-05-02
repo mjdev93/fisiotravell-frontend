@@ -21,6 +21,7 @@ export function Servicios() {
                             <li>Geriatría</li>
                         </ul>
                         <img className='terapeutaServicios' src={terapeutaServicios} alt='Imagen terapeuta haciendo una movilización a un paciente' />
+                        <button className='verServicios'>VER SERVICIOS</button>
                         <div className='nuestrosServiciosRight'>
                             <div className='nuestrosServiciosRightText'>
                                 <h3 className='titleSup'>Aparatología</h3>
