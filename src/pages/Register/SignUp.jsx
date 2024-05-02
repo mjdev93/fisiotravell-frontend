@@ -6,8 +6,10 @@ import './signUp.css'
 const SignUp = () => {
   return (
     <>
+    <div className='background'>
     <SignUpHeader/>
     <SignUpForm/>
+    </div>
     </>
   )
 }
