@@ -41,7 +41,7 @@ function Header() {
           </section>
           <section className='menu'>
             <button onClick={() => scrollTo('servicios')} className='servicios tab'>SERVICIOS</button>
-            <button className='metodologia tab'>METODOLOGÍA</button>
+            <button onClick={() => scrollTo('metodologia')}className='metodologia tab'>METODOLOGÍA</button>
             <button className='equipo tab'>EL EQUIPO</button>
             <button className='articulos tab'>ARTÍCULOS</button>
             <button onClick={() => scrollTo('empresa')} className='empresas tab'>EMPRESAS</button>
