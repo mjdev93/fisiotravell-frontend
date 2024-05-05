@@ -1,6 +1,8 @@
 import React from 'react'
-import SearchBar from '../../components/searchBar/SearchBar'
-import AdminView from '../../components/adminView/AdminView'
+import AdminPage from '../../components/adminPage/AdminPage';
+
+
+
 
 
 
@@ -10,8 +12,10 @@ const Admin = () => {
     <>
 
     
-    <SearchBar/>
-    <AdminView/>
+    <AdminPage />
+   
+    
+   
     </>
   )
 }

@@ -1,57 +1,6 @@
-<<<<<<< HEAD
-.signup {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #ff808b;
-    color: white;
-  }
-  
-  .logoLog img {
-    width: 100px; 
-    height: auto; 
-  }
-  
-  .signupnav {
-    display: flex;
-    justify-content: space-between;
-    width: 100%; /* Ocupar todo el ancho disponible */
-    align-items: center; 
-  }
-  
-  .logMenu {
-    display: flex;
-  }
-  
-  .logMenu button {
-    background: none;
-    width: 100px;
-    border-radius: 15px;
-    border: 1px solid transparent;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: inherit;
-    color: white;
-    line-height: 1.5;
-    cursor: pointer;
-    transition: border-color 0.25s;
-
-  }
-  
-  .logMenu button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-  
-  .linkHeader:visited {
-    text-decoration: none;
-    color: inherit;
-  }
-=======
 .justify-content-end{
     background-color: #ff808b;
     color: #1d4289;
     font-family: inherit;
     font-size: 18px;
 }
->>>>>>> main

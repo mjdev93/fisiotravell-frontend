@@ -17,9 +17,14 @@ function SearchBar() {
 
   return (
     <>
-      
+      <body className="bodySearch">
+      <div className="adminHeader">
+        <h2 className="hello">Hola, Admin</h2>
+        <button className="buttonCreate">Crear Usuario</button>
+        <img src=""></img>
+           </div>
      
-      <div className="sidebar"></div>
+      
 
       <div className="container">
         <input
@@ -31,6 +36,7 @@ function SearchBar() {
         <Table data={search(Users)} />
         
       </div>
+      </body>
     </>
   );
 }
