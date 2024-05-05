@@ -17,7 +17,7 @@ function SearchBar() {
 
   return (
     <>
-      <h2>Hola, Admin</h2>
+      <h2 className={searchBarTitle}>Hola, Admin</h2>
       <button className="button">Crear Usuario</button>
       <div className="sidebar"></div>
 
