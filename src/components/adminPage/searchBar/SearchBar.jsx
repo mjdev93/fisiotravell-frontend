@@ -9,24 +9,18 @@ function SearchBar() {
 
   const search = (data) => {
     return data.filter((item) =>
-      keys
-        .some((key) => item[key].toLowerCase().includes(query))
-        
+      keys.some((key) => item[key].toLowerCase().includes(query))
     );
   };
 
   return (
-    <>
-      <body className="bodySearch">
-      <div className="adminHeader">
-        <h2 className="hello">Hola, Admin</h2>
-        <button className="buttonCreate">Crear Usuario</button>
-        <img src=""></img>
-           </div>
-     
-      
+    <div className="search-container">
+      <div className="bodySearch">
+        <div className="adminHeader">
+          <h2 className="hello">Hola, Admin</h2>
+          <button className="buttonCreate">Crear Usuario</button>
+        </div>
 
-      <div className="container">
         <input
           className="search"
           placeholder="search..."
@@ -34,13 +28,9 @@ function SearchBar() {
         />
 
         <Table data={search(Users)} />
-        
       </div>
-      </body>
-    </>
+    </div>
   );
 }
-
-
 
 export default SearchBar;
