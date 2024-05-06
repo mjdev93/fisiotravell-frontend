@@ -1,6 +1,21 @@
-   .carousel {
-    width: 600px;
-    height: 380px;
-    margin: auto;
+
+  .slick-slider {
+    width: 1200px;
+    
   }
   
+.titleVideoCarousel{
+font-size: 21px;
+text-align: center;
+width: 80%;
+color: #ff808b;
+
+}
+.subTitleVideoCarousel{
+  font-size: 12px;
+text-align: center;
+width: 80%;
+color: #1d4289;
+margin-top:20px
+}
+ 
