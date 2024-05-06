@@ -1,49 +1,50 @@
-import React from "react";
-import { useEffect, useState, useRef } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Navigate } from "react-router-dom";
+import { login } from '../../services/auth.service' 
 import "./loginForm.css";
 import logo from "../../../public/images/icono-hojas.webp";
 
 export const LoginForm = () => {
-  const emailRef = useRef();
-
   const [email, setEmail] = useState("");
-  const [emailFocus, setEmailFocus] = useState(false);
-
-  const [pass, setPass] = useState("");
-  const [passFocus, setPassFocus] = useState(false);
+  const [password, setPassword] = useState("");
+  const [logged, setLogged] = useState(false);
+  const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    //aquí hay que enviar y validar los datos... después redirigir a ¿/profile/:userId?
+    try {
+      await login(email, password);
+      setLogged(true);
+    } catch (error) {
+      console.error("Login failed:", error);
+      setError("Email or password is incorrect.");
+    }
   };
 
   return (
     <div className="logContainer">
+      {logged && <Navigate to="/profile" />}
       <div className="logBox">
         <img src={logo} className="successIcon" alt="Logo de Fisio Travell" />
-
         <h1>Accede</h1>
+        {error && <p className="error">{error}</p>}
         <form className="logForm" onSubmit={handleSubmit}>
           <label htmlFor="email">Email:</label>
           <input
             type="email"
             id="email"
-            ref={emailRef}
+            value={email}
             autoComplete="on"
             onChange={(e) => setEmail(e.target.value)}
             required
-            onFocus={() => setEmailFocus(true)}
-            onBlur={() => setEmailFocus(false)}
           />
           <label htmlFor="password">Contraseña:</label>
           <input
             type="password"
             id="password"
-            onChange={(e) => setPass(e.target.value)}
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
             required
-            onFocus={() => setPassFocus(true)}
-            onBlur={() => setPassFocus(false)}
           />
           <button className="logButton">Aceptar</button>
         </form>

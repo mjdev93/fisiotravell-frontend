@@ -1,18 +1,40 @@
-/* import React from 'react'
+import { useEffect, useState } from "react";
+import axios from "../../../api/axios";
+import React from "react";
 
+const RoutineHistory = () => {
+  useEffect(() => {
+    [routine, setRoutine] = useState([])
+    [exercise, setExercise] = useState([])
+    [exerciseRoutine, setExerciseRoutine] = useState([]);
 
-const RoutineHistory = ({history}) => {
+    const getData = async () => {
+      try {
+        const routineResponse = await axios.get("/routines");
+        const exerciseResponse = await axios.get("exercises");
+        const exerciseRoutineResponse = await axios.get("/exerciseRoutines");
+
+        setRoutine(routineResponse.data);
+        setExercise(exerciseResponse.data);
+        setExerciseRoutine(exerciseRoutineResponse.data);
+
+        
+      } catch (error) {
+        console.log('Error retrieving the data')
+      }
+    };
+    getData();
+  },[]);
+
   return (
-    <div className="routineHistory">
-      <h2>Historial de Rutinas</h2>
-      <ul>
-        {historial.map((rutina, index) => (
-          <li key={index}>{rutina}</li>
-        ))}
-      </ul>
-    </div>
-  );
+  <>
+  <div>
+    <h1>{routine.date}</h1>
+    
+
+  </div>;
+  </>
+  )
 };
 
-
-export default RoutineHistory */
+export default RoutineHistory;
