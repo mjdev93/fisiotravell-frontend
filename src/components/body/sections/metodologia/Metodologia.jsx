@@ -30,7 +30,6 @@ export function Metodologia() {
 
         </>
     )
-
 }
 
 export default Metodologia

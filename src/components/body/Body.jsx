@@ -4,7 +4,7 @@ import { Videos } from './sections/videos/Videos'
 import { Servicios } from './sections/servicios/Servicios'
 import { Equipo } from './sections/equipo/Equipo'
 import { Metodologia } from './sections/metodologia/Metodologia'
-
+import { Doctoralia } from './sections/doctoralia/doctoralia'
 
 function Body() {
 
@@ -16,7 +16,7 @@ function Body() {
                 <Servicios/>
                 <Metodologia/>
                 <Equipo/>
-                
+                <Doctoralia/>
             </main>
         </>
     )
