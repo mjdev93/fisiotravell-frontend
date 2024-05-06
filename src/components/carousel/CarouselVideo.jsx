@@ -1,44 +1,69 @@
 import React from "react";
-import ReactPlayer from "react-player";
-import { Carousel } from "react-bootstrap"
-import "bootstrap/dist/css/bootstrap.css";
-import "./carouselVideo.css";
-
-const CarouselVideo = () => {
-
-  const videoProps = [
-    {
-      id: 1,
-      url:"https://www.youtube.com/watch?v=41VyPWPZ87I"
-    },
-    {
-      id: 2,
-      url:"https://www.youtube.com/watch?v=bFWrgXEJ3rQ",
-    },
-    {
-      id: 3,
-      url: "https://youtu.be/IfdW52X1BSc",
-    },
-  ]
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import "./carouselVideo.css"
 
 
-  return (    <div className="carouselContainer">
-  <Carousel className="carousel">
-    {videoProps.map((videoObj) => {
-      return (
-        <Carousel.Item key={videoObj.id}>
-          <ReactPlayer
-            url={videoObj.url}
-            controls={true}
-            playing={false}
-            fade={true}
-          />
-        </Carousel.Item>
-      );
-    })}
-  </Carousel>
-</div>)
+export const CarouselVideo = () => {
+  const settings = {
+    dots: false, 
+    infinite: true, 
+    speed: 500, 
+    slidesToShow: 3, 
+    slidesToScroll: 1, 
+    autoplay: true, 
+    autoplaySpeed: 4000, 
+    cssEase: "linear" ,
+    pauseOnHover: true,
+  };
 
+  return (
+    <div style={{ margin: '0px' }}>
+      <Slider {...settings}>
+        <div>
+  
+          <iframe
+            width="90%"
+            height="180"
+            src="https://www.youtube.com/embed/eW6oZ62qrlQ?si=Ere3OgeEoousgPwc"
+            frameBorder="0"
+            
+            allowFullScreen
+            title="Video 1"
+          ></iframe>
+          <h3 className="subTitleVideoCarousel">EJERCICIO DE TOBILLO</h3>
+          <h2 className="titleVideoCarousel">Ejercicio de la estrella</h2>
+        </div>
+        <div>
+          <iframe
+            width="90%"
+            height="180"
+            src="https://www.youtube.com/embed/eT22KWjXTWo?si=vjC4oBii31Z-XEcx"
+            frameBorder="0"
+            
+            allowFullScreen
+            title="Video 2"
+          ></iframe>
+          <h3 className="subTitleVideoCarousel">ESTIRAMIENTO DE PIERNA</h3>
+          <h2 className="titleVideoCarousel">Estiramiento de isquios</h2>
+        </div>
+        <div>
+          <iframe
+            width="90%"
+            height="180"
+            src="https://www.youtube.com/embed/89ukX_1Oth8?si=7XTZUA_R333MietA"
+            frameBorder="0"
+            
+            allowFullScreen
+            title="Video 3"
+          ></iframe>
+          <h3 className="subTitleVideoCarousel">ESTIRAMIENTO DE PIERNA</h3>
+          <h2 className="titleVideoCarousel">Estiramiento de gemelo</h2>
+        </div>
+      </Slider>
+    </div>
+  );
 };
 
 export default CarouselVideo;
