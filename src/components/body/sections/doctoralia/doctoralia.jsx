@@ -37,3 +37,10 @@ export function Doctoralia() {
 }
 
 export default Doctoralia;
+
+/*
+
+<a id="zl-url" class="zl-url" href="https://www.doctoralia.es/maria-jurado-diaz/fisioterapeuta/granada" rel="nofollow" data-zlw-doctor="maria-jurado-diaz" data-zlw-type="big_with_calendar" data-zlw-opinion="false" data-zlw-hide-branding="true" data-zlw-saas-only="false">María Jurado Díaz - Doctoralia.es</a>
+<script>!function($_x,_s,id){var js,fjs=$_x.getElementsByTagName(_s)[0];if(!$_x.getElementById(id)){js = $_x.createElement(_s);js.id = id;js.src = "//platform.docplanner.com/js/widget.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","zl-widget-s");</script>
+
+*/
