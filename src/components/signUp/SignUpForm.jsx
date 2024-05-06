@@ -7,8 +7,9 @@ import {
   faCircleExclamation,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-import logo from "../../../public/images/icono-hojas.webp"
+import logo from "../../../public/images/icono-hojas.webp";
 import React from "react";
+import axios from "../../api/axios";
 
 const USER_REGEX = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ ]{3,30}$/;
 const LASTNAME_REGEX = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ ]{3,30}$/;
@@ -92,19 +93,47 @@ const SignUpForm = () => {
       setErrMsg("Not valid entry");
       return;
     }
-    console.log(user, pass);
-    setSuccess(true);
-  };
+    try {
+      const responseDB = await axios.post("/auth/signup", JSON.stringify({
+        name: user,
+        lastname: lastName,
+        email,
+        phone,
+        password: pass,
+      }),
+    {
+      headers: {'Content-Type': 'application/json'},
+      withCredentials: true
+    });
+
+      setSuccess(true);
+    } catch (error) {
+      if (!error?.response) {
+        setErrMsg('No Server Response');
+    } else if (error.response?.status === 403) {
+        setErrMsg('Email ya registrado');
+    } else {
+        setErrMsg('Registration Failed')
+    }
+    errRef.current.focus();
+}
+}
 
   return (
     <>
       {success ? (
         <div className="successContainer">
-        <div className="successRegister">
-          <h1 className="successTitle">Registro exitoso</h1>
-          <img src={logo} className="successIcon" alt='Logo de Fisio Travell' />
-          <button className="successButton"><Link to="/login">Accede</Link></button>
-        </div>
+          <div className="successRegister">
+            <h1 className="successTitle">Registro exitoso</h1>
+            <img
+              src={logo}
+              className="successIcon"
+              alt="Logo de Fisio Travell"
+            />
+            <button className="successButton">
+              <Link to="/login">Accede</Link>
+            </button>
+          </div>
         </div>
       ) : (
         <div className="loginContainer">

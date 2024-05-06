@@ -4,7 +4,8 @@ import NotFound from "../pages/notFound/NotFound.jsx";
 import Login from "../pages/logIn/Login.jsx";
 import SignUp from "../pages/Register/SignUp.jsx";
 import Admin from "../pages/admin/Admin.jsx";
-
+/* import Profile from "../pages/profile/Profile.jsx";
+ */
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,24 +17,20 @@ const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login/>,
+    element: <Login />,
   },
   {
     path: "/signup",
-    element: <SignUp/>,
+    element: <SignUp />,
   },
   {
-    path: '/admin/',
-    element: <Admin />
+    path: "/admin/",
+    element: <Admin />,
   },
-  /* {
-            path: '/profile/:userId',
-            element: <Profile />
-          },
-      
-
-
-          */
+/*   {
+    path: "/profile/",
+    element: <Profile />,
+  }, */
 ]);
 
 export default router;
