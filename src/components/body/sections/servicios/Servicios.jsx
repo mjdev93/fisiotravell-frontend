@@ -1,6 +1,8 @@
 import './servicios.css'
 import icono from '/images/icono-hojas.webp'
 import terapeutaServicios from '/images/terapeuta-movilizacion.webp'
+import checkListPink from '/images/check-fisio-travell.webp'
+
 
 export function Servicios() {
     
@@ -11,14 +13,15 @@ export function Servicios() {
                     <h1 className='titleServicios'>Nuestros servicios</h1>
                     <div className='nuestrosServicios'>
                         <ul className='listServices'>
-                            <li>Fisioterapia avanzada</li>
-                            <li>Ecografía</li>
-                            <li>Osteopatía</li>
-                            <li>Drenaje linfático</li>
-                            <li>Readaptación funcional</li>
-                            <li>Terapia invasiva</li>
-                            <li>Tratamientos postquirúrgicos</li>
-                            <li>Geriatría</li>
+
+                            <li><img className='checkList' src={checkListPink}/>Fisioterapia avanzada</li>
+                            <li> <img className='checkList' src={checkListPink}/>Ecografía</li>
+                            <li><img className='checkList' src={checkListPink}/>Osteopatía</li>
+                            <li><img className='checkList' src={checkListPink}/>Drenaje linfático</li>
+                            <li><img className='checkList' src={checkListPink}/>Readaptación funcional</li>
+                            <li><img className='checkList' src={checkListPink}/>Terapia invasiva</li>
+                            <li><img className='checkList' src={checkListPink}/>Tratamientos postquirúrgicos</li>
+                            <li><img className='checkList' src={checkListPink}/>Geriatría</li>
                         </ul>
                         <img className='terapeutaServicios' src={terapeutaServicios} alt='Imagen terapeuta haciendo una movilización a un paciente' />
                         <button className='verServicios'>VER SERVICIOS</button>

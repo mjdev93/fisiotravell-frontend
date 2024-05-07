@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 
 function Header() {
-
   const [colorChange, setColorChange] = useState(false);
 
   const changeNavbarColor = () => {
@@ -22,15 +21,25 @@ function Header() {
     };
   }, []);
 
-
-  function scrollTo(id) {
+  const scrollTo = (id) => {
     const element = document.getElementById(id);
+    let ajuste = 0;
+    
+    if(id==="metodologia") ajuste =  60;
+    if(id==="servicios") ajuste =  100;
+    if(id==="equipo") ajuste =  15;
+    if(id==="empresa") ajuste =  40;
+    if(id==="videos") ajuste =  70;
+    if(id==="calendario") ajuste = 100;
+  
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const topPos = element.getBoundingClientRect().top + window.scrollY - ajuste;
+      window.scrollTo({
+        top: topPos,
+        behavior: 'smooth'
+      });
     }
-  }
-
-
+}
 
   return (
     <>
@@ -42,10 +51,10 @@ function Header() {
           <section className='menu'>
             <button onClick={() => scrollTo('servicios')} className='servicios tab'>SERVICIOS</button>
             <button onClick={() => scrollTo('metodologia')}className='metodologia tab'>METODOLOGÍA</button>
-            <button className='equipo tab'>EL EQUIPO</button>
+            <button onClick={() => scrollTo('equipo')}className='equipo tab'>EL EQUIPO</button>
             <button className='articulos tab'>ARTÍCULOS</button>
             <button onClick={() => scrollTo('empresa')} className='empresas tab'>EMPRESAS</button>
-            <button className='cita remark'>PIDE CITA</button>
+            <button onClick={() => scrollTo('calendario')} className='cita remark'>PIDE CITA</button>
             <button onClick={() => scrollTo('videos')} className='videos remark'>VÍDEOS</button>
             <Link to="/signup">
             <button className='login remark'>ACCEDER</button>
@@ -54,7 +63,7 @@ function Header() {
         </nav>
         <section className='text'>
           <h2>Apuesta en salud y habrás ganado</h2>
-          <button className='cita remark hero'>PIDE CITA</button>
+          <button onClick={() => scrollTo('calendario')} className='cita remark hero'>PIDE CITA</button>
         </section>
       </header>
     </>

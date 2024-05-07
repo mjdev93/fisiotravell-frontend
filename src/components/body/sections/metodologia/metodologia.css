@@ -8,6 +8,7 @@
     align-items: center;
     justify-items: center;
     grid-template-rows: 50px 1fr;
+    
 }
 
 .titleMetodologia {
@@ -20,7 +21,7 @@
 .enumeracion {
     display: grid;
     background-color: white;
-    height: 500px;
+    height: 400px;
     width: 90%;
     grid-template-columns: repeat(4, 1fr);
     padding:100px
@@ -134,7 +135,7 @@
 }
 .masInformacion{
     position: relative;
-    top: -140px;
+    bottom: 20px;
     color: white;
     background-image: linear-gradient(to right, #1d4289, #ff808b);
     padding: 9px 4px 6px 4px;

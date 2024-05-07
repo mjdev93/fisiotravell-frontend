@@ -86,3 +86,13 @@
 .irAVideos:hover {
     opacity: .8;
 }
+.slick-prev{
+    transform: scale(2.5) !important;
+    margin-left:-40px
+}
+.slick-next{
+    transform: scale(2.5) !important;
+}
+.slick-prev:before, .slick-next:before {  
+    color: #1d4289 !important;
+}

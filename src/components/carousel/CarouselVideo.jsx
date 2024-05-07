@@ -15,7 +15,7 @@ export const CarouselVideo = () => {
     autoplay: true, 
     autoplaySpeed: 4000, 
     cssEase: "linear" ,
-    pauseOnHover: true,
+    pauseOnHover: true
   };
 
   return (
@@ -28,9 +28,8 @@ export const CarouselVideo = () => {
             height="180"
             src="https://www.youtube.com/embed/eW6oZ62qrlQ?si=Ere3OgeEoousgPwc"
             frameBorder="0"
-            
             allowFullScreen
-            title="Video 1"
+            title="Ejercicio de la estrella"
           ></iframe>
           <h3 className="subTitleVideoCarousel">EJERCICIO DE TOBILLO</h3>
           <h2 className="titleVideoCarousel">Ejercicio de la estrella</h2>
@@ -41,9 +40,8 @@ export const CarouselVideo = () => {
             height="180"
             src="https://www.youtube.com/embed/eT22KWjXTWo?si=vjC4oBii31Z-XEcx"
             frameBorder="0"
-            
             allowFullScreen
-            title="Video 2"
+            title="Estiramiento de isquios"
           ></iframe>
           <h3 className="subTitleVideoCarousel">ESTIRAMIENTO DE PIERNA</h3>
           <h2 className="titleVideoCarousel">Estiramiento de isquios</h2>
@@ -54,9 +52,8 @@ export const CarouselVideo = () => {
             height="180"
             src="https://www.youtube.com/embed/89ukX_1Oth8?si=7XTZUA_R333MietA"
             frameBorder="0"
-            
             allowFullScreen
-            title="Video 3"
+            title="Estiramiento de gemelo"
           ></iframe>
           <h3 className="subTitleVideoCarousel">ESTIRAMIENTO DE PIERNA</h3>
           <h2 className="titleVideoCarousel">Estiramiento de gemelo</h2>
