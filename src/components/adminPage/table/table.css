@@ -1,11 +1,12 @@
 *{
+  margin: 0;
     box-sizing: border-box;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
   
   .searchBarTitle{
-    margin: 10px 70px 70px;
+    margin: 10px 70px 70px 0;
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -15,13 +16,10 @@
   
   .button {
     margin: 10px 70px 70px;
-    padding: 10px;
+    padding: 10px 0;
   }
   
-  .search {
-    padding: 10px;
-    font-size: 14px;
-  }
+  
   /* Table Styles */
   
 
@@ -98,7 +96,9 @@
     justify-content: center;
     align-items: center;
     margin: 50px auto;
+
   }
+  
 
 
   /* Cambiar el color del texto de los elementos de paginación */

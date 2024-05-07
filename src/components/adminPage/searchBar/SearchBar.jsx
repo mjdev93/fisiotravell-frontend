@@ -2,6 +2,7 @@ import "./searchBar.css";
 import { useEffect, useState } from "react";
 import Table from "../table/Table";
 import { getAllUsers } from "../../../services/admin.service"
+import { Link } from 'react-router-dom';
 
 
 function SearchBar() {
@@ -36,8 +37,13 @@ function SearchBar() {
       <div className="bodySearch">
         <div className="adminHeader">
           <h2 className="hello">Hola, Admin</h2>
+
+          <Link to="/create">
+            
           <button className="buttonCreate">Crear Usuario</button>
+          </Link>
         </div>
+
 
         <input
           className="search"

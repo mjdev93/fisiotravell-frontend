@@ -1,0 +1,84 @@
+.body-createUser {
+    font-family: inherit;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#0056b3;
+}
+
+.createUser-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 300px;
+}
+
+.create-label {
+    color: #0056b3;
+}
+
+.info-card {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+    
+}
+
+
+
+.info-card label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.info-card input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+
+.info-card button:hover {
+    background-color: #0056b3;
+}
+
+
+.bttn-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: #ff808b;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    padding: 8px 3px 5px 3px;
+    width: 140px;
+}
+
+.bttn-submit:hover {
+    background-color: #ff808b;
+    background-color: white;
+    color: #1d4289;
+  }
+

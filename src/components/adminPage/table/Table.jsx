@@ -3,7 +3,7 @@ import { faUserPen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PropTypes } from "prop-types";
 import "./table.css";
-import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.css";
 import React, { useState } from "react";
 
 const Table = ({ data }) => {
