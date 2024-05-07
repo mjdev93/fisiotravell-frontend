@@ -5,7 +5,6 @@ import React, { useState, useEffect } from 'react';
 
 function Header() {
   const [colorChange, setColorChange] = useState(false);
-  const [scrollHeight, setScrollHeight] = useState(false);
 
   const changeNavbarColor = () => {
     if (window.scrollY >= 80) { 
@@ -21,30 +20,25 @@ function Header() {
       window.removeEventListener('scroll', changeNavbarColor);
     };
   }, []);
-/*
-  function scrollTo(id) {
+
+  const scrollTo = (id) => {
     const element = document.getElementById(id);
-    if (element) element.scrollIntoView({ behavior: 'smooth' });  
-  }
-*/
-
-function scrollTo(id) {
-  const element = document.getElementById(id);
-  let ajuste = 0;
-  if(id==="metodologia") ajuste =  60;
-  if(id==="servicios") ajuste =  100;
-  if(id==="equipo") ajuste =  15;
-  if(id==="empresa") ajuste =  40;
-  if(id==="videos") ajuste =  70;
-  if(id==="calendario") ajuste = 100;
-
-  if (element) {
-    const topPos = element.getBoundingClientRect().top + window.scrollY - ajuste;
-    window.scrollTo({
-      top: topPos,
-      behavior: 'smooth'
-    });
-  }
+    let ajuste = 0;
+    
+    if(id==="metodologia") ajuste =  60;
+    if(id==="servicios") ajuste =  100;
+    if(id==="equipo") ajuste =  15;
+    if(id==="empresa") ajuste =  40;
+    if(id==="videos") ajuste =  70;
+    if(id==="calendario") ajuste = 100;
+  
+    if (element) {
+      const topPos = element.getBoundingClientRect().top + window.scrollY - ajuste;
+      window.scrollTo({
+        top: topPos,
+        behavior: 'smooth'
+      });
+    }
 }
 
   return (
@@ -69,7 +63,7 @@ function scrollTo(id) {
         </nav>
         <section className='text'>
           <h2>Apuesta en salud y habrás ganado</h2>
-          <button className='cita remark hero'>PIDE CITA</button>
+          <button onClick={() => scrollTo('calendario')} className='cita remark hero'>PIDE CITA</button>
         </section>
       </header>
     </>
