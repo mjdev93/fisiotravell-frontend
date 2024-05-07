@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 import logo from "../../../public/images/icono-hojas.webp";
 import React from "react";
 import { login, signUp2 } from "../../services/auth.service";
+import { InfoContext } from "../../context/infoContext";
+import { useContext } from "react";
 
 const USER_REGEX = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ ]{3,30}$/;
 const LASTNAME_REGEX = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ ]{3,30}$/;
@@ -48,6 +50,8 @@ const SignUpForm = () => {
 
   const [errMsg, setErrMsg] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  const {setInfo} = useContext(InfoContext)
 
   useEffect(() => {
     emailRef.current.focus();
@@ -95,11 +99,11 @@ const SignUpForm = () => {
     }
     try {
       const response = await signUp2(user, lastName, email, pass, phone);
+      
       if (response) {
-        const logged = await login(email, pass);
-        if (logged) {
+          console.log(response.newUser)
+          setInfo(response.newUser)
           setSuccess(true);
-        }
       }
     } catch (error) {
       if (!error?.response) {
