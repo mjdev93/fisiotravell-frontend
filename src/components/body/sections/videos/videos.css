@@ -1,5 +1,3 @@
-
-
 .videosContainer {
     width: 100%;
     height: 500px;
@@ -54,20 +52,21 @@
     grid-template-rows: 80px 10px 1fr;
 
 
- /* Ajusta esto según el diseño de tu sitio */
-        overflow: hidden; /* Evita que cualquier contenido que se desborde se muestre */
-    
+    /* Ajusta esto según el diseño de tu sitio */
+    overflow: hidden;
+    /* Evita que cualquier contenido que se desborde se muestre */
+
 }
 
-.titleSupCarrusel{
-    color:#ff808b ;
+.titleSupCarrusel {
+    color: #ff808b;
 }
 
-.subTitleBotCarrusel{
-    color:white ;
+.subTitleBotCarrusel {
+    color: white;
 }
 
-.irAVideos{
+.irAVideos {
     position: absolute;
     left: 43%;
     bottom: 10px;
@@ -83,16 +82,31 @@
     cursor: pointer;
     transition: opacity 0.6s;
 }
+
 .irAVideos:hover {
     opacity: .8;
 }
-.slick-prev{
+
+.slick-prev {
     transform: scale(2.5) !important;
-    margin-left:-40px
+    margin-left: -40px;
+    z-index: 999 !important;
 }
-.slick-next{
+
+.slick-next {
     transform: scale(2.5) !important;
 }
-.slick-prev:before, .slick-next:before {  
+
+.slick-prev:before,
+.slick-next:before {
     color: #1d4289 !important;
+}
+
+@media screen and (max-width: 1500px) {
+    .slick-prev {
+        margin-left: -20px;
+    } 
+    .slick-next {
+        margin-right: 20px;
+    }
 }
