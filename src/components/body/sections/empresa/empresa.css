@@ -135,7 +135,7 @@
     margin-right: 315px;
     width: 200px;
     border-radius: 20px;
-    border: 1px solid transparent;
+    border: none;
     font-size: 14px;
     font-weight: 500;
     line-height: 1.5;
@@ -145,4 +145,24 @@
 
 .info:hover {
     opacity: .8;
+}
+
+@media screen and (max-width: 1400px) {
+    .textContainerRigth {
+        grid-template-rows: 85px 1fr;
+    }
+    .containerRigth {
+        grid-template-columns: 10% 1fr 1fr 1fr 7%;
+    }
+
+    .textContainerRigth > h2 {
+        font-size: 20px;
+        margin-top: 16px;
+    }
+
+    .textLeft {
+        margin-left: 39px;
+        margin-right: 0px;
+        font-size: 16px;
+    }
 }
