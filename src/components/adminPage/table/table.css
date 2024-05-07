@@ -30,29 +30,34 @@
   }
   /* Table Styles */
   
-  
-  
-  .table {
-    margin: 10px 70px 70px;
+
+.table {
+    margin: 15vh 30px 30px;
     border-radius: 5px;
     font-size: 12px;
     font-weight: normal;
     border: none;
     border-collapse: collapse;
-    width: 100%;
-    max-width: 100%;
+    width: 40%;
+    max-width: 90%;
     white-space: nowrap;
     background-color: white;
+    font-family: inherit;
   }
   
   .table td, .table th {
     text-align: center;
     padding: 8px;
   }
+
+  .listData td {
+    font-family: inherit;
+  }
   
   .table td {
     border-right: 1px solid #f8f8f8;
-    font-size: 12px;
+    font-size: 14px;
+    font-family: inherit;
   }
   
   .table thead th {
@@ -69,6 +74,56 @@
   .table tr:nth-child(even) {
     background: #F8F8F8;
   }
+
+  .trashIcon {
+    margin-right: 7px; 
+  }
+  
+  
+  .fa-solid.fa-user-pen {
+    margin-left: 7px; 
+    margin-right: 5px; 
+  }
+  
+
+  .table tbody tr:nth-child(odd) td{
+    background-color: #f2f2f2; /* Color gris claro */
+  }
+
+  .pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto;
+  }
+
+
+  /* Cambiar el color del texto de los elementos de paginación */
+.page-link {
+  color: #ff808b; /* Color de texto normal */
+}
+
+.page-item {
+  color: #ff808b;
+}
+
+.page-link:hover {
+  color: #fff; /* Color de texto al pasar el cursor */
+}
+
+/* Cambiar el color de fondo del elemento de página activa */
+.page-item.active .page-link {
+  background-color: #1d4289; /* Color de fondo del elemento activo */
+  border-color: #1d4289; /* Color del borde del elemento activo */
+}
+
+/* Cambiar el color de fondo de los elementos de paginación al pasar el cursor */
+.page-item:hover .page-link {
+  background-color: #ff808b; /* Color de fondo al pasar el cursor */
+}
+
+ 
+
   
   /* Responsive */
   

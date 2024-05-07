@@ -1,14 +1,28 @@
 import React from 'react'
-import SearchBar from '../../components/searchBar/SearchBar'
+import SearchBar from '../../components/adminPage/searchBar/SearchBar';
+
+
+
+
+
+
+
+
+
 
 
 const Admin = () => {
   return (
-    <>
+    
 
     
     <SearchBar/>
-    </>
+
+    
+   
+    
+   
+   
   )
 }
 
