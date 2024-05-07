@@ -11,12 +11,13 @@ function Body() {
     return (
         <>
             <main>
+            <Doctoralia/>
                 <Empresa/>
                 <Videos/>
                 <Servicios/>
                 <Metodologia/>
                 <Equipo/>
-                <Doctoralia/>
+                
             </main>
         </>
     )

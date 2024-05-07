@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./carouselVideo.css"
 
-
 export const CarouselVideo = () => {
   const settings = {
     dots: false,

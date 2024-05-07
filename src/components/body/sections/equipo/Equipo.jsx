@@ -36,8 +36,11 @@ export function Equipo() {
                                 </div>
                             </div>
                             <div className="descripcion-maria">
-                                    <p>Fisioterapeuta-CEO con 8 años de experiencia en diversos campos de la fisioterapia y dedicada a la investigación.
-                                        <br/><br/>Graduada en fisioterapia con especialización en gerontología en UCAM, especialista en musculoesquelética avanzada basada en el razonamiento clínico por a Universidad San Rafael de Nebrija. </p>
+                                    <p>
+                                    Fisioterapeuta-CEO con 8 años de experiencia, graduada en fisioterapia con especialización en gerontología por UCAM y experta en musculoesquelética avanzada de la Universidad San Rafael de Nebrija. Además, posee formación en ejercicio terapéutico mediante Pilates por Pilates Inside Out, hipopresivos, yoga, nutrigenómica por la Universidad de Toledo y osteopatía estructural por la EOM.
+                                    <br/><br/>
+                                    Activa en divulgación y creación de contenido sanitario en redes sociales, es pionera en Granada en usar realidad virtual para readaptación funcional y manejo del linfedema. Actualmente se dedica a la valoración diagnóstica y gestiona la clínica.
+                                    </p>
                                 </div>
                         </div>
                         <div className="equipo-jose">
@@ -48,8 +51,13 @@ export function Equipo() {
                                 </div>
                             </div>
                             <div className="descripcion-jose">
-                                    <p>Fisioterapeuta-CEO con 8 años de experiencia en diversos campos de la fisioterapia y dedicada a la investigación.
-                                        <br/><br/>Graduada en fisioterapia con especialización en gerontología en UCAM, especialista en musculoesquelética avanzada basada en el razonamiento clínico por a Universidad San Rafael de Nebrija. </p>
+                                    <p>
+                                    Fisioterapeuta-CEO con 7 años de experiencia y un enfoque individualizado en tratamientos, impulsado por su pasión por el deporte. Graduado en fisioterapia por la UGR, especializado en inducción miofascial, osteopatía estructural por la EOM, readaptación deportiva, y terapia invasiva.
+                                    <br/><br/>
+                                    Ha trabajado como coordinador en el equipo de fisioterapia de la Copa del Rey de tenis en Granada (2017) y como docente adjunto en ecografía, terapia invasiva y neuromodulación.
+                                    <br/><br/>
+                                    Actualmente, además de su práctica como fisioterapeuta, gestiona la contabilidad de la clínica.
+                                    </p>
                                 </div>
                         </div>
                         <div className="equipo-irene">
@@ -60,8 +68,11 @@ export function Equipo() {
                                 </div>
                             </div>
                             <div className="descripcion-irene">
-                                    <p>Fisioterapeuta-CEO con 8 años de experiencia en diversos campos de la fisioterapia y dedicada a la investigación.
-                                        <br/><br/>Graduada en fisioterapia con especialización en gerontología en UCAM, especialista en musculoesquelética avanzada basada en el razonamiento clínico por a Universidad San Rafael de Nebrija. </p>
+                                    <p>
+                                    Fisioterapeuta con 6 años de experiencia, graduada en fisioterapia por la UFV y especialista en osteopatía estructural y kinesiología holística de EOFIS. Su práctica se centra en identificar las causas profundas de los síntomas de sus pacientes, teniendo en cuenta cómo el cuerpo, la alimentación, los hábitos y el estado emocional.
+                                    <br/><br/>
+                                    Es experta en la valoración de la ATM, disfunciones craneomandibulares, suelo pélvico, cólico del lactante y diástasis abdominal, formada en estos campos por Fisiofocus. También posee conocimientos en pilates suelo, accesorios y máquinas, adquiridos en la AEFEP. Actualmente se capacita como profesora internacional de yoga en la IEY y trabaja como fisioterapeuta en Fisio Travell.
+                                    </p>
                                 </div>
                         </div>
                     </div>
