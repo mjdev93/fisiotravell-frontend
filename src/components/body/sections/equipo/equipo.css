@@ -60,6 +60,12 @@
     align-items: center;
     justify-items: start;
     padding-left: 10%;
+    
+}
+
+.el-equipo-right > ul {
+    list-style-type: none;
+    margin-left: -40px;
 }
 
 .el-equipo-right>h2 {
@@ -70,6 +76,8 @@
 
 .el-equipo-right>ul>li {
     color: white;
+ 
+    
 }
 
 .nosotros-equipo {
@@ -89,11 +97,14 @@
 
 .descripcion-maria, .descripcion-jose, .descripcion-irene {
     grid-row: 2/ 3;
+    
 }
 
 .descripcion-maria > p, .descripcion-jose > p, .descripcion-irene > p {
-    margin-top:30px;
+    margin-top:20px;
     text-wrap: balance;
+    line-height: 23px;
+    font-size: 15px;
 }
 
 .foto-maria-container {

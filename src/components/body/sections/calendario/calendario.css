@@ -1,0 +1,19 @@
+.calendarioContainer{
+
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    display: grid;
+    width: 100%;
+    
+}
+.calendarioMaria{
+    grid-column: 2/ 3;
+    
+}
+.calendarioJose{
+    grid-column: 3/ 4;
+    
+}
+.calendarioIrene{
+    grid-column: 4/ 5;
+    
+}
