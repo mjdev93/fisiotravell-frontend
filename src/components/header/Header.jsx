@@ -52,7 +52,7 @@ function Header() {
             <button onClick={() => scrollTo('servicios')} className='servicios tab'>SERVICIOS</button>
             <button onClick={() => scrollTo('metodologia')}className='metodologia tab'>METODOLOGÍA</button>
             <button onClick={() => scrollTo('equipo')}className='equipo tab'>EL EQUIPO</button>
-            <button className='articulos tab'>ARTÍCULOS</button>
+            {/*<button className='articulos tab'>ARTÍCULOS</button>*/}
             <button onClick={() => scrollTo('empresa')} className='empresas tab'>EMPRESAS</button>
             <button onClick={() => scrollTo('calendario')} className='cita remark'>PIDE CITA</button>
             <button onClick={() => scrollTo('videos')} className='videos remark'>VÍDEOS</button>
