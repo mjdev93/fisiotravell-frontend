@@ -6,10 +6,6 @@ import { useEffect, useState } from 'react'
 import {getUserByToken} from './services/profile.service'
 
 
-
-
-
-
 function App() {
   const [info, setInfo] = useState(null)
 
