@@ -41,7 +41,7 @@ const Table = ({ data }) => {
                   <FontAwesomeIcon icon={faTrashCan} className="trashIcon" />
                   <FontAwesomeIcon
                     icon={faUserPen}
-                    className="fa-solid fa-user-pen"
+                    className="fa-solid-fa-user-pen"
                   />
                 </td>
               </tr>

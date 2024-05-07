@@ -3,13 +3,7 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
   }
-  /*
-  body{
-    font-family: Helvetica;
-    -webkit-font-smoothing: antialiased;
-    background: #1d4289
-  }
-  */
+  
   .searchBarTitle{
     margin: 10px 70px 70px;
     font-size: 30px;
@@ -76,8 +70,17 @@
   }
 
   .trashIcon {
-    margin-right: 7px; 
+    margin-right: 15px; 
+    padding-right: 10px;
+    color: red;
   }
+
+  .fa-solid-fa-user-pen {
+    padding-left: 10px;
+    color: #1d4289;
+  }
+
+  .tIcons 
   
   
   .fa-solid.fa-user-pen {
