@@ -42,10 +42,10 @@ function Header() {
           <section className='menu'>
             <button onClick={() => scrollTo('servicios')} className='servicios tab'>SERVICIOS</button>
             <button onClick={() => scrollTo('metodologia')}className='metodologia tab'>METODOLOGÍA</button>
-            <button className='equipo tab'>EL EQUIPO</button>
+            <button onClick={() => scrollTo('equipo')}className='equipo tab'>EL EQUIPO</button>
             <button className='articulos tab'>ARTÍCULOS</button>
             <button onClick={() => scrollTo('empresa')} className='empresas tab'>EMPRESAS</button>
-            <button className='cita remark'>PIDE CITA</button>
+            <button onClick={() => scrollTo('calendario')} className='cita remark'>PIDE CITA</button>
             <button onClick={() => scrollTo('videos')} className='videos remark'>VÍDEOS</button>
             <Link to="/signup">
             <button className='login remark'>ACCEDER</button>

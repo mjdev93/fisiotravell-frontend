@@ -57,6 +57,14 @@
     font-size: 18px;
     line-height: 35px;
     color: #1d4289;
+    list-style-type: none;
+}
+
+.checkList{
+    vertical-align: -5%;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
 }
 
 .nuestrosServiciosRight{
