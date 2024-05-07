@@ -1,16 +1,34 @@
-/* import React from 'react'
-import { useEffect, useState } from 'react';
-import UserInfo from './userInfo/UserInfo';
-import RoutineHistory from './RoutineHistory/RoutineHistory';
+import React, { useState, useEffect, useContext } from 'react';
+import './userProfile.css'
+import { InfoContext } from '../../context/infoContext';
 
 
-export const UserProfile = () => {
+const UserProfile = () => {
 
-    const [user, setUser] = useState('')
-    const [history, setHistory] = useState('')
-    
+  const {info, setInfo} = useContext(InfoContext)
+
+
   return (
-    <div>UserProfile</div>
-  )
-}
- */
+    <div>
+      <h1>profile</h1>
+       <div className='profileItem'>
+        <span className='profileLabel'>Nombre:</span>
+        <span className='profileValue'>{info?.name}</span>
+      </div>
+      <div className='profileItem'>
+        <span className='profileLabel'>Apellidos:</span>
+        <span className='profileValue'>{info?.lastname}</span>
+      </div>
+      <div className='profileItem'>
+        <span className='profileLabel'>Email:</span>
+        <span className='profileValue'>{info?.email}</span>
+      </div>
+      <div className='profileItem'>
+        <span className='profileLabel'>Teléfono:</span>
+        <span className='profileValue'>{info?.phone}</span>
+      </div> 
+    </div>
+  );
+};
+
+export default UserProfile;

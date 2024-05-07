@@ -1,0 +1,31 @@
+.userProfile {
+  font-family: inherit;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px;
+}
+
+.profileItem {
+  margin-bottom: 10px;
+}
+
+.profileLabel {
+  font-weight: bold;
+  color: #1d4289; 
+}
+
+.profileValue {
+  margin-left: 10px;
+  color: #333;
+}
+
+
+@media (min-width: 768px) {
+  .userProfile {
+    margin: 20px auto;
+    float: left;
+    clear: both;
+  }
+}

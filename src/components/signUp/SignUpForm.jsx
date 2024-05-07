@@ -9,7 +9,9 @@ import {
 import { Link } from "react-router-dom";
 import logo from "../../../public/images/icono-hojas.webp";
 import React from "react";
-import axios from "../../api/axios";
+import { login, signUp2 } from "../../services/auth.service";
+import { InfoContext } from "../../context/infoContext";
+import { useContext } from "react";
 
 const USER_REGEX = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ ]{3,30}$/;
 const LASTNAME_REGEX = /^[a-zA-ZáéíóúÁÉÍÓÚüÜñÑ ]{3,30}$/;
@@ -48,6 +50,8 @@ const SignUpForm = () => {
 
   const [errMsg, setErrMsg] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  const {setInfo} = useContext(InfoContext)
 
   useEffect(() => {
     emailRef.current.focus();
@@ -94,30 +98,24 @@ const SignUpForm = () => {
       return;
     }
     try {
-      const responseDB = await axios.post("/auth/signup", JSON.stringify({
-        name: user,
-        lastname: lastName,
-        email,
-        phone,
-        password: pass,
-      }),
-    {
-      headers: {'Content-Type': 'application/json'},
-      withCredentials: true
-    });
-
-      setSuccess(true);
+      const response = await signUp2(user, lastName, email, pass, phone);
+      
+      if (response) {
+          console.log(response.newUser)
+          setInfo(response.newUser)
+          setSuccess(true);
+      }
     } catch (error) {
       if (!error?.response) {
-        setErrMsg('No Server Response');
-    } else if (error.response?.status === 403) {
-        setErrMsg('Email ya registrado');
-    } else {
-        setErrMsg('Registration Failed')
+        setErrMsg("No Server Response");
+      } else if (error.response?.status === 403) {
+        setErrMsg("Email ya registrado");
+      } else {
+        setErrMsg("Registration Failed");
+      }
+      errRef.current.focus();
     }
-    errRef.current.focus();
-}
-}
+  };
 
   return (
     <>
@@ -131,7 +129,7 @@ const SignUpForm = () => {
               alt="Logo de Fisio Travell"
             />
             <button className="successButton">
-              <Link to="/login">Accede</Link>
+              <Link to="/profile">Accede</Link>
             </button>
           </div>
         </div>
