@@ -14,7 +14,6 @@ export const LoginForm = () => {
     e.preventDefault();
     try {
       await login(email, password);
-      setInfo
       setLogged(true);
     } catch (error) {
       console.error("Login failed:", error);

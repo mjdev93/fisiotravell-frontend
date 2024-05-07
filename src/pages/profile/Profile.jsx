@@ -1,22 +1,15 @@
-/* import React from 'react'
-import UserProfile from '../../components/userProfile/UserProfile'
-
-const Profile = () => {
-  return (
-    
-    < UserProfile />
-  
-  )
-}
-
-export default Profile */
-
-
 import React from 'react'
+import RoutineHistory from '../../components/userProfile/routineHistory/RoutineHistory'
+import UserProfile from '../../components/userProfile/userInfo/UserProfile'
+
+
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <>
+    <RoutineHistory/>
+    <UserProfile/>
+    </>
   )
 }
 

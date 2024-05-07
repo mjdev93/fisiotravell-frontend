@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './userProfile.css'
-import { InfoContext } from '../../context/infoContext';
+import { InfoContext } from '../../../context/infoContext';
 
 
 const UserProfile = () => {
