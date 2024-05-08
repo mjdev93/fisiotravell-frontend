@@ -134,16 +134,18 @@
     border-bottom-right-radius: 20px;
 }
 
-.foto-maria-text>h2,
-.foto-jose-text>h2,
-.foto-irene-text>h2 {
+.titleNombreFisio{
     color: white;
+    font-size: 24px;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: 500;
+    line-height: normal;
 }
 
-.foto-maria-text>h3,
-.foto-jose-text>h3,
-.foto-irene-text>h3 {
+.subTitleCargo {
     color: #1d4289;
+    font-size: 19px;
 }
 
 .equipo-jose {
