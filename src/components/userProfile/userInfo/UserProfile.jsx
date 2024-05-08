@@ -9,8 +9,8 @@ const UserProfile = () => {
 
 
   return (
-    <div>
-      <h1>profile</h1>
+    <div className='profileDataContainer'>
+      
        <div className='profileItem'>
         <span className='profileLabel'>Nombre:</span>
         <span className='profileValue'>{info?.name}</span>

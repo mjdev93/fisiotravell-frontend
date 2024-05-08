@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getMyRoutines } from "../../../services/history.service";
 import moment from "moment/moment";
-
+import "./routineHistory.css"
 const RoutineHistory = () => {
 
   const [myRoutines, setMyRoutines] = useState([]);
@@ -18,9 +18,20 @@ const displayRoutines = () => {
   console.log(myRoutines)
   const formatRoutines = myRoutines.map((routine, index) => {
   return (
-    <div key={index}>
-        <h1>{routine.date}</h1>
-    </div>
+    <>
+    
+<details key={index} name="historyRoutine">
+        <summary className="fechaProfileUser">{routine.date}</summary>
+        <div>
+            <p>Contenido</p>
+        </div>
+      </details>
+      <hr/>
+      </>
+
+
+
+
   )})
   return formatRoutines
 }
@@ -31,7 +42,7 @@ const displayRoutines = () => {
   <>
   <div>
       {displayRoutines()}
-  </div>;
+  </div>
   </>
   )
 };
