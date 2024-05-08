@@ -1,14 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Navigate } from "react-router-dom";
 import { login } from '../../services/auth.service' 
 import "./loginForm.css";
 import logo from "../../../public/images/icono-hojas.webp";
+import { InfoContext } from "../../context/infoContext";
 
 export const LoginForm = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [logged, setLogged] = useState(false);
   const [error, setError] = useState(null);
+  const {setInfo} = useContext(InfoContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -1,0 +1,92 @@
+ *{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    font-family: inherit;
+  } 
+
+ 
+  .adminHeader {
+    width: 100%;
+    height: 180px;
+    background-color: #1d4289;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-image: url('/images/formitas2.webp');
+    background-repeat: no-repeat;
+    background-position: right center; /* Posición a la derecha y centrada verticalmente */
+    background-attachment: fixed; /* Fondo fijo */
+    background-size: auto 100% ;
+   
+}
+  .hello {
+    margin:  0 auto;
+    margin-left: 8vw;
+    font-size: 30px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #ff808b;
+    padding: 30px 0;
+    text-align: left;
+  }
+  
+  .buttonCreate {
+    color: white;
+    background-color: #ff808b;
+    margin-left: 8vw;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: inherit;
+    line-height: 1.5;
+    cursor: pointer;
+    transition: border-color 0.25s;
+    padding: 8px 3px 5px 3px;
+    width: 140px;
+  }
+  
+  .buttonCreate:hover {
+    background-color: #ff808b;
+    background-color: white;
+    color: #1d4289;
+  }
+
+
+  .containerSearchBar {
+    margin-bottom: 20px; /* Espacio entre la barra de búsqueda y la tabla */
+  }
+  
+  .search {
+    width: 40%;
+    padding: 10px;
+    font-size: 14px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 20px auto;
+    margin-left: 3vw;
+    position: fixed;
+  }
+
+.search-container {
+  height: 100vh;
+  background-color: white;
+}
+
+
+.search-container {
+  background-image: url('/images/formitas2.webp');
+  background-repeat: no-repeat;
+  background-position: right center; /* Posición a la derecha y centrada verticalmente */
+  background-attachment: fixed; /* Fondo fijo */
+  background-size: auto 100% ;
+
+}
+  
+
+  
+  
+  
+  

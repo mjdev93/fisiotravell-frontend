@@ -21,10 +21,20 @@ const displayRoutines = () => {
     const extractedDate = routine.date
     const niceDate= moment(extractedDate).format('D/MM/YYYY')
   return (
-    <div key={index}>
-        <button className="masInformacion
-">{niceDate}</button>
-    </div>
+    <>
+    
+<details key={index} name="historyRoutine">
+        <summary className="fechaProfileUser">{routine.date}</summary>
+        <div>
+            <p>Contenido</p>
+        </div>
+      </details>
+      <hr/>
+      </>
+
+
+
+
   )})
   return formatRoutines
 }
@@ -35,7 +45,7 @@ const displayRoutines = () => {
   <>
   <div>
       {displayRoutines()}
-  </div>;
+  </div>
   </>
   )
 };

@@ -1,3 +1,10 @@
+.profileDataContainer{
+  grid-column: 1/2;
+  padding-left: 50px;
+  padding-top: 50px;
+}
+
+
 .userProfile {
   font-family: inherit;
   border: 1px solid #ccc;
@@ -29,3 +36,4 @@
     clear: both;
   }
 }
+
