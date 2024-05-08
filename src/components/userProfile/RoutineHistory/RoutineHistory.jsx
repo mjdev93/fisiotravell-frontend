@@ -1,38 +1,40 @@
-import { useEffect, useState } from "react";
-import axios from "../../../api/axios";
-import React from "react";
-
+import React, { useEffect, useState } from "react";
+import { getMyRoutines } from "../../../services/history.service";
+import moment from "moment/moment";
+import "./routineHistory.css"
 const RoutineHistory = () => {
-  useEffect(() => {
-    [routine, setRoutine] = useState([])
-    [exercise, setExercise] = useState([])
-    [exerciseRoutine, setExerciseRoutine] = useState([]);
 
-    const getData = async () => {
-      try {
-        const routineResponse = await axios.get("/routines");
-        const exerciseResponse = await axios.get("exercises");
-        const exerciseRoutineResponse = await axios.get("/exerciseRoutines");
+  const [myRoutines, setMyRoutines] = useState([]);
 
-        setRoutine(routineResponse.data);
-        setExercise(exerciseResponse.data);
-        setExerciseRoutine(exerciseRoutineResponse.data);
+  useEffect(()=>{
+    const fetchMyRoutines = async () =>{
+      const {data} = await getMyRoutines()
+        setMyRoutines(data)
+    }
+    fetchMyRoutines()
+  }, [])
+  
+const displayRoutines = () => {
+  console.log(myRoutines)
+  const formatRoutines = myRoutines.map((routine, index) => {
+    const extractedDate = routine.date
+    const niceDate= moment(extractedDate).format('D/MM/YYYY')
+  return (
+    <div key={index}>
+        <button className="masInformacion
+">{niceDate}</button>
+    </div>
+  )})
+  return formatRoutines
+}
 
-        
-      } catch (error) {
-        console.log('Error retrieving the data')
-      }
-    };
-    getData();
-  },[]);
 
+    
   return (
   <>
   <div>
-    <h1>{routine.date}</h1>
-    
-
-  </div>;
+      {displayRoutines()}
+  </div>
   </>
   )
 };

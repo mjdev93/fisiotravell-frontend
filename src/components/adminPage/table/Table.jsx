@@ -7,7 +7,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import React, { useState } from "react";
 
 const Table = ({ data }) => {
-  console.log(data)
+  
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 8;
   const lastIndex = currentPage * recordsPerPage;
