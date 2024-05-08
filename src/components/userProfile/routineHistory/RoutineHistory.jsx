@@ -17,21 +17,13 @@ const RoutineHistory = () => {
 const displayRoutines = () => {
   console.log(myRoutines)
   const formatRoutines = myRoutines.map((routine, index) => {
+    const extractedDate = routine.date
+    const niceDate= moment(extractedDate).format('D/MM/YYYY')
   return (
-    <>
-    
-<details key={index} name="historyRoutine">
-        <summary className="fechaProfileUser">{routine.date}</summary>
-        <div>
-            <p>Contenido</p>
-        </div>
-      </details>
-      <hr/>
-      </>
-
-
-
-
+    <div key={index}>
+        <button className="masInformacion
+">{niceDate}</button>
+    </div>
   )})
   return formatRoutines
 }
