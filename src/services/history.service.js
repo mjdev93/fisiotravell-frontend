@@ -18,13 +18,6 @@ export const getMyRoutines = async () => {
     }
 }
 
-<<<<<<< HEAD
-
-
-
-
-
-=======
 export const getMyexerciseRoutines= async () => {
 
     const token = localStorage.getItem('token')
@@ -47,4 +40,3 @@ export const getMyexerciseRoutines= async () => {
 
 
   
->>>>>>> Jaime
