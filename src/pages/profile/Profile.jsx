@@ -1,14 +1,16 @@
-import React from 'react'
+import React, { useState, useEffect, useContext } from 'react';
 import RoutineHistory from '../../components/userProfile/routineHistory/RoutineHistory'
 import UserProfile from '../../components/userProfile/userInfo/UserProfile'
 import "./profile.css"
+import { InfoContext } from '../../context/infoContext';
 
 
 const Profile = () => {
+  const {info, setInfo} = useContext(InfoContext)
   return (
     <>
     <header className="headerProfile"> 
-    <h1 className='nameUserHeader'>Manolito Gafotas</h1>
+    <h1 className='nameUserHeader'>{info?.name} {info?.lastname}</h1>
     <div className='containerFormitasHeader'></div>
     
      </header> 
