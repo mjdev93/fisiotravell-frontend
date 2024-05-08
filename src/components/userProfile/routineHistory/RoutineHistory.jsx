@@ -40,7 +40,10 @@ const RoutineHistory = () => {
       <div key={`exercise-${index}`}>
         <p>{exercise.title}</p>
         <p>{exercise.videoUrl}</p>
-        <p>{exercise.description}</p>
+        <p>{exercise['exercise-routine'].duration}</p>
+        <p>{exercise['exercise-routine'].lapse}</p>
+        <p>{exercise['exercise-routine'].series}</p>
+        <p>{exercise['exercise-routine'].observations}</p>
       </div>
     ));
   };
