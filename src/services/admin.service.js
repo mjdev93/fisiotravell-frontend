@@ -18,7 +18,7 @@ export const getAllUsers = async () => {
 };
 
 export const createUser = async (userData) => {
-  console.log("name",userData.name,"lastname", userData.lastname, "email", userData.email, "phone", userData.phone)
+  // console.log("name",userData.name,"lastname", userData.lastname, "email", userData.email, "phone", userData.phone)
   const token = localStorage.getItem("token");
   try {
     const { data } = await api.post(
@@ -28,7 +28,7 @@ export const createUser = async (userData) => {
         lastname: userData.lastname,
         email: userData.email,
         phone: userData.phone,
-        password: "Qq123456!"
+        password: userData.password,
       },
       {
         headers: {
@@ -36,9 +36,50 @@ export const createUser = async (userData) => {
         },
       }
     );
-    console.log(data)
+    console.log(data);
     return data;
   } catch (error) {
     console.log("Error al crear usuario", error);
   }
 };
+
+// export const editUser = async (userId, userData) => {
+//   const token = localStorage.getItem("token");
+//   try {
+//     const { data } = await api.patch(
+//       `/user/${userId}`,
+//       {
+//         name: userData.name,
+//         lastname: userData.lastname,
+//         email: userData.email,
+//         phone: userData.phone,
+//         // Puedes incluir aquí cualquier otro campo que desees editar
+//       },
+//       {
+//         headers: {
+//           token: token,
+//         },
+//       }
+//     );
+//     console.log(data);
+//     return data;
+//   } catch (error) {
+//     console.log("Error al editar usuario", error);
+//     throw error;
+//   }
+// };
+
+// export const deleteUser = async (userId) => {
+//   try {
+//     const { data } = await api.delete(`/user/${userId}`, {
+//       headers: {
+//         token: localStorage.getItem("token"),
+//       },
+//     });
+//     console.log(data);
+//     return data;
+//   } catch (error) {
+//     console.log(error);
+//     throw new Error("Something went wrong");
+//   }
+// };
