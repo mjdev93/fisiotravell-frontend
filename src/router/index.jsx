@@ -4,8 +4,10 @@ import NotFound from "../pages/notFound/NotFound.jsx";
 import Login from "../pages/logIn/Login.jsx";
 import SignUp from "../pages/Register/SignUp.jsx";
 import Admin from "../pages/admin/Admin.jsx";
-import UserProfile from "../components/userProfile/UserProfile.jsx";
+import Profile from "../pages/profile/Profile.jsx";
 import CreateUser from "../components/adminPage/createUser/CreateUser.jsx";
+
+
 
 const router = createBrowserRouter([
   {
@@ -23,6 +25,7 @@ const router = createBrowserRouter([
   {
     path: "/admin/",
     element: <Admin />,
+    
   },
   {
     path: "/create",
@@ -30,7 +33,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/profile/",
-    element: <UserProfile />,
+    element: <Profile />,
   },
   {
     path: "*",

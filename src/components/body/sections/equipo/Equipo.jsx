@@ -33,8 +33,8 @@ export function Equipo() {
                         <div className="equipo-maria">
                             <div className="foto-maria-container">
                                 <div className="foto-maria-text">
-                                    <h2>María Jurado Díaz</h2>
-                                    <h3>CEO, fisioterapeuta y osteópata</h3>
+                                    <h2 className='titleNombreFisio'>María Jurado Díaz</h2>
+                                    <h3 className='subTitleCargo'>CEO, fisioterapeuta y osteópata</h3>
                                 </div>
                             </div>
                             <div className="descripcion-maria">
@@ -48,8 +48,8 @@ export function Equipo() {
                         <div className="equipo-jose">
                             <div className="foto-jose-container">
                                 <div className="foto-jose-text">
-                                    <h2>Jose Ángel Herrera Bolivar</h2>
-                                    <h3>CEO, fisioterapeuta y osteópata</h3>
+                                    <h2 className='titleNombreFisio'>Jose Ángel Herrera Bolivar</h2>
+                                    <h3 className='subTitleCargo'>CEO, fisioterapeuta y osteópata</h3>
                                 </div>
                             </div>
                             <div className="descripcion-jose">
@@ -60,8 +60,8 @@ export function Equipo() {
                         <div className="equipo-irene">
                             <div className="foto-irene-container">
                                 <div className="foto-irene-text">
-                                    <h2>Irene Pérez Águila</h2>
-                                    <h3>Fisioterapeuta y osteópata</h3>
+                                    <h2 className='titleNombreFisio'>Irene Pérez Águila</h2>
+                                    <h3 className='subTitleCargo'>Fisioterapeuta y osteópata</h3>
                                 </div>
                             </div>
                             <div className="descripcion-irene">

@@ -15,8 +15,7 @@ export const LoginForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await login(email, password);
-      setInfo(response.user)
+      await login(email, password);
       setLogged(true);
     } catch (error) {
       console.error("Login failed:", error);
