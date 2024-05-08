@@ -4,14 +4,7 @@ import NotFound from "../pages/notFound/NotFound.jsx";
 import Login from "../pages/logIn/Login.jsx";
 import SignUp from "../pages/Register/SignUp.jsx";
 import Admin from "../pages/admin/Admin.jsx";
-<<<<<<< HEAD
-import UserProfile from "../components/userProfile/UserProfile.jsx";
 import CreateUser from "../components/adminPage/createUser/CreateUser.jsx";
-=======
-import Profile from "../pages/profile/Profile.jsx";
-
-
->>>>>>> 1b21ee99377c3df42a57bde76034cce74fa13cdd
 
 const router = createBrowserRouter([
   {
@@ -35,10 +28,10 @@ const router = createBrowserRouter([
     path: "/create",
     element: <CreateUser />,
   },
-  {
-    path: "/profile/",
-    element: <Profile />,
-  },
+  // {
+  //   path: "/profile/",
+  //   element: <Profile />,
+  // },
   {
     path: "*",
     element: <NotFound />,

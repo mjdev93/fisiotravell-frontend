@@ -26,7 +26,7 @@ function SearchBar() {
     fetchData();
     
     
-  }, []);
+  }, [userData]);
 
   const search = (data) => {
     return data.filter((item) =>

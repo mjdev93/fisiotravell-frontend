@@ -17,23 +17,28 @@ export const getAllUsers = async () => {
   }
 };
 
-export const createUser = async (name, lastname, email, phone) => {
- 
-
+export const createUser = async (userData) => {
+  console.log("name",userData.name,"lastname", userData.lastname, "email", userData.email, "phone", userData.phone)
+  const token = localStorage.getItem("token");
   try {
     const { data } = await api.post(
-      "/user/", {
-      name: name,
-      lastname: lastname,
-      email: email,
-      phone: phone,
-    });
-    localStorage.setItem("token", data.token);
-    // console.log(data, "data");
+      "/user/",
+      {
+        name: userData.name,
+        lastname: userData.lastname,
+        email: userData.email,
+        phone: userData.phone,
+        password: "Qq123456!"
+      },
+      {
+        headers: {
+          token: token,
+        },
+      }
+    );
+    console.log(data)
     return data;
   } catch (error) {
-    console.log("Error al crear usuario", error.message);
+    console.log("Error al crear usuario", error);
   }
 };
-
-
