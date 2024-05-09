@@ -7,7 +7,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import React, { useState } from "react";
 
 const Table = ({ data }) => {
-  
   const [currentPage, setCurrentPage] = useState(1);
   const recordsPerPage = 8;
   const lastIndex = currentPage * recordsPerPage;
@@ -27,6 +26,7 @@ const Table = ({ data }) => {
               <th>APELLIDO</th>
               <th>EMAIL</th>
               <th>TELÉFONO</th>
+              <th>CONTRASEÑA</th>
             </tr>
           </thead>
           <tbody className="tbody">
@@ -37,12 +37,18 @@ const Table = ({ data }) => {
                 <td>{item.lastname}</td>
                 <td>{item.email}</td>
                 <td>{item.phone} </td>
+                <td>{item.password} </td>
                 <td className="tIcons">
-                  <FontAwesomeIcon icon={faTrashCan} className="trashIcon" />
-                  <FontAwesomeIcon
-                    icon={faUserPen}
-                    className="fa-solid-fa-user-pen"
-                  />
+                  <button className="btn-icons">
+                    <FontAwesomeIcon icon={faTrashCan} className="trashIcon" />
+                  </button>
+                  <button className="btn-icons">
+                    
+                    <FontAwesomeIcon
+                      icon={faUserPen}
+                      className="fa-solid-fa-user-pen"
+                    />
+                  </button>
                 </td>
               </tr>
             ))}

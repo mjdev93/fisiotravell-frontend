@@ -14,12 +14,34 @@
     padding: 30px 0;
   }
   
-  .button {
-    margin: 10px 70px 70px;
-    padding: 10px 0;
+  
+  .btn-icons {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+  }
+
+  .trashIcon {
+    color: red;
   }
   
+  .btn-icons .trashIcon,
+  .btn-icons .fa-solid-fa-user-pen {
+    padding-left: 10px;
+    
+    font-size: 20px; /* Ajusta el tamaño del icono */
+    margin: 0 10px; /* Espaciado entre los iconos */
+    
+  }
   
+  /* Estilos adicionales al pasar el ratón */
+  .btn-icons:hover .trashIcon,
+  .btn-icons:hover .fa-solid-fa-user-pen {
+    font-size: 24px; /* Tamaño más grande al pasar el ratón */
+  }
+  
+
   /* Table Styles */
   
 
@@ -67,18 +89,10 @@
     background: #F8F8F8;
   }
 
-  .trashIcon {
-    margin-right: 15px; 
-    padding-right: 10px;
-    color: red;
-  }
+  
 
-  .fa-solid-fa-user-pen {
-    padding-left: 10px;
-    color: #1d4289;
-  }
+  
 
-  .tIcons 
   
   
   .fa-solid.fa-user-pen {
@@ -132,64 +146,67 @@
   
   @media (max-width: 767px) {
     .table {
-        display: block;
-        width: 100%;
+      display: block;
+      width: 100%;
     }
-    .container:before{
-        content: "Scroll horizontally >";
-        display: block;
-        text-align: right;
-        font-size: 11px;
-        color: white;
-        padding: 0 0 10px;
+    .container:before {
+      content: "Scroll horizontally >";
+      display: block;
+      text-align: right;
+      font-size: 11px;
+      color: white;
+      padding: 0 0 10px;
     }
-    .table thead, .table tbody, .table thead th {
-        display: block;
+    .table thead,
+    .table tbody,
+    .table thead th {
+      display: block;
     }
-    .table thead th:last-child{
-        border-bottom: none;
+    .table thead th:last-child {
+      border-bottom: none;
     }
     .table thead {
-        float: left;
+      float: left;
     }
     .table tbody {
-        width: auto;
-        position: relative;
-        overflow-x: auto;
+      width: auto;
+      position: relative;
+      overflow-x: auto;
     }
-    .table td, .table th {
-        padding: 20px .625em .625em .625em;
-        height: 60px;
-        vertical-align: middle;
-        box-sizing: border-box;
-        overflow-x: hidden;
-        overflow-y: auto;
-        width: 120px;
-        font-size: 13px;
-        text-overflow: ellipsis;
+    .table td,
+    .table th {
+      padding: 20px .625em .625em .625em;
+      height: 60px;
+      vertical-align: middle;
+      box-sizing: border-box;
+      overflow-y: auto;
+      width: 120px;
+      font-size: 13px;
+      /* Eliminar text-overflow: ellipsis; */
     }
     .table thead th {
-        text-align: left;
-        border-bottom: 1px solid #f7f7f9;
+      text-align: left;
+      border-bottom: 1px solid #f7f7f9;
     }
     .table tbody tr {
-        display: table-cell;
+      display: table-cell;
     }
     .table tbody tr:nth-child(odd) {
-        background: none;
+      background: none;
     }
     .table tr:nth-child(even) {
-        background: transparent;
+      background: transparent;
     }
     .table tr td:nth-child(odd) {
-        background: #F8F8F8;
-        border-right: 1px solid #E6E4E4;
+      background: #f8f8f8;
+      border-right: 1px solid #e6e4e4;
     }
     .table tr td:nth-child(even) {
-        border-right: 1px solid #E6E4E4;
+      border-right: 1px solid #e6e4e4;
     }
     .table tbody td {
-        display: block;
-        text-align: center;
+      display: block;
+      text-align: center;
     }
   }
+  
