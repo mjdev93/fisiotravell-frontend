@@ -38,7 +38,7 @@
   /* Estilos adicionales al pasar el ratón */
   .btn-icons:hover .trashIcon,
   .btn-icons:hover .fa-solid-fa-user-pen {
-    font-size: 28px; /* Tamaño más grande al pasar el ratón */
+    font-size: 24px; /* Tamaño más grande al pasar el ratón */
   }
   
 
