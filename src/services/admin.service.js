@@ -43,43 +43,44 @@ export const createUser = async (userData) => {
   }
 };
 
- export const editUser = async (userId, userData) => {
-   const token = localStorage.getItem("token");
-   try {
-     const { data } = await api.patch(
-       `/user/${userId}`,
-       {
-         name: userData.name,
-         lastname: userData.lastname,
-         email: userData.email,
+export const editUser = async (userId, userData) => {
+  const token = localStorage.getItem("token");
+  try {
+    const { data } = await api.patch(
+      `/user/${userId}`,
+      {
+        name: userData.name,
+        lastname: userData.lastname,
+        email: userData.email,
         phone: userData.phone,
-       },
-       {
-         headers: {
+      },
+      {
+        headers: {
           token: token,
-         },
-       }
-     );
-     console.log(data);
-     return data;
-   } catch (error) {
-     console.log("Error al editar usuario", error);
-     throw error;
-   }
- };
+        },
+      }
+    );
+    console.log(data);
+    return data;
+  } catch (error) {
+    console.log("Error al editar usuario", error);
+    throw error;
+  }
+};
 
-/*  export const deleteUser = async (userId) => {
-const token = localStorage.getItem("token");
-   try {
-     const { data } = await api.delete(`/user/${userId}`, {
-       headers: {
-         token: localStorage.getItem("token"),
-       },
+export const deleteUser = async (userId) => {
+  const token = localStorage.getItem("token");
+  try {
+    const { data } = await api.delete(`/user/${userId}`, {
+      headers: {
+        token: token,
+      },
     });
-     console.log(data);
-     return data;
-   } catch (error) {
+
+    console.log(data);
+    return data;
+  } catch (error) {
     console.log(error);
-     throw new Error("Something went wrong");
-   }
- }; */
+    throw new Error("Something went wrong");
+  }
+};

@@ -107,7 +107,7 @@ const CreateUser = ({ onClose }) => {
             </label>
             <input
               type="text"
-              name="phone"
+              name="password"
               className="form-control"
               value={inputData.password}
               onChange={(e) =>
