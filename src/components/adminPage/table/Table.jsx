@@ -7,9 +7,10 @@ import DeleteUser from "../adminComands/deleteUser/DeleteUser";
 import { enterProfile } from "../../../services/admin.service";
 import "./table.css";
 import "bootstrap/dist/css/bootstrap.css";
-import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Table = ({ data }) => {
+  const navigate = useNavigate()
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedUserId, setSelectedUserId] = useState(null);
   const [showDeleteModal, setShowDeleteModal] = useState(false); 
@@ -29,8 +30,9 @@ const Table = ({ data }) => {
   const handleProfileClick = async (userId) => {
     try {
       const userData = await enterProfile(userId); 
-     /*  const userId = user.id
-      <Navigate to= "/profile/$" /> */
+      console.log(userId)
+      navigate(`/profile/${userId}`)
+  
     } catch (error) {
       console.error("Error al obtener datos del usuario:", error);
     }

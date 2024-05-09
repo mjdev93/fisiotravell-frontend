@@ -3,6 +3,9 @@ import './userProfile.css'
 import { InfoContext } from '../../../context/infoContext';
 
 
+//cuando entro /profile/profileId
+
+
 const UserProfile = () => {
 
   const {info, setInfo} = useContext(InfoContext)
