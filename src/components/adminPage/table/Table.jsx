@@ -4,13 +4,15 @@ import { faUserPen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PropTypes } from "prop-types";
 import DeleteUser from "../adminComands/deleteUser/DeleteUser";
+import { enterProfile } from "../../../services/admin.service";
 import "./table.css";
 import "bootstrap/dist/css/bootstrap.css";
+import { Navigate } from "react-router-dom";
 
 const Table = ({ data }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedUserId, setSelectedUserId] = useState(null);
-  const [showDeleteModal, setShowDeleteModal] = useState(false); // Estado para controlar la visibilidad del modal
+  const [showDeleteModal, setShowDeleteModal] = useState(false); 
 
   const recordsPerPage = 8;
   const lastIndex = currentPage * recordsPerPage;
@@ -21,7 +23,17 @@ const Table = ({ data }) => {
 
   const handleDeleteUser = (userId) => {
     setSelectedUserId(userId);
-    setShowDeleteModal(true); // Mostrar el modal cuando se hace clic en eliminar
+    setShowDeleteModal(true);
+  };
+
+  const handleProfileClick = async (userId) => {
+    try {
+      const userData = await enterProfile(userId); 
+     /*  const userId = user.id
+      <Navigate to= "/profile/$" /> */
+    } catch (error) {
+      console.error("Error al obtener datos del usuario:", error);
+    }
   };
 
   return (
@@ -40,7 +52,7 @@ const Table = ({ data }) => {
           </thead>
           <tbody className="tbody">
             {records.map((item) => (
-              <tr key={item.id} className="listData">
+              <tr key={item.id} className="listData" onClick={() => handleProfileClick(item.id)}>
                 <td>{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.lastname}</td>
