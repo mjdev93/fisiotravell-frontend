@@ -3,9 +3,7 @@ import { getMyRoutines } from "../../../services/history.service";
 import moment from "moment/moment";
 import YoutubeEmbed from "../../youtubeEmbed/YoutubeEmbed";
 import "./routineHistory.css";
-import uniqid from 'uniqid';
-
-
+import uniqid from "uniqid";
 
 const RoutineHistory = () => {
   const [myRoutines, setMyRoutines] = useState([]);
@@ -19,42 +17,52 @@ const RoutineHistory = () => {
   }, []);
 
   const displayRoutines = () => {
-    return myRoutines.map((routine) => {
+    const formatRoutines = myRoutines.map((routine) => {
       const extractedDate = routine.date;
       const niceDate = moment(extractedDate).format("D/MM/YYYY");
-      const routineId = uniqid(); // Generar un ID único para la rutina
+      const routineId = uniqid();
 
       return (
         <div key={routineId}>
           <details name="historyRoutine">
             <summary className="fechaProfileUser">{niceDate}</summary>
-            <div>
-              {displayExercises(routine.exercises)}
-            </div>
+            <div>{displayExercises(routine.exercises)}</div>
           </details>
           <hr />
         </div>
       );
     });
+    return formatRoutines;
   };
 
   const displayExercises = (exercises) => {
-    return exercises.map((exercise) => {
-      const exerciseId = uniqid(); // Generar un ID único para el ejercicio
-
-      return (
-        <div key={exerciseId} className="containerExerciseRoutineProfileSecond">
-          <hr className="separacionBarra" />
-          <div className="videoExerciseRoutine">
-            <YoutubeEmbed embedId={getEmbedId(exercise.videoUrl)} />
-          </div>
-          <div className="durationExercise">{exercise['exercise-routine'].duration}</div>
-          <div className="lapseExercise">{exercise['exercise-routine'].lapse}</div>
-          <div className="seriesExercise">{exercise['exercise-routine'].series}</div>
-          <div className="observationsExercise">{exercise['exercise-routine'].observations}</div>
+    return (
+      <div className="containerExerciseRoutineProfileFirst">
+        <div className="textTopRoutines">
+          <p className="nameHistory">Esguince</p>
+          <p className="seriesHistory">Series</p>
+          <p className="repesHistory">Repeticiones</p>
+          <p className="duracionHistory">Duración</p>
+          <p className="comentarioHistory">Comentarios</p>
         </div>
-      );
-    });
+        {exercises.map((exercise) => {
+          const exerciseId = uniqid();
+
+          return (
+            <div className="containerExerciseRoutineProfileSecond" key={exerciseId}>
+              <hr className="separacionBarra" />
+              <div className="videoExerciseRoutine">
+                <YoutubeEmbed embedId={getEmbedId(exercise.videoUrl)} />
+              </div>
+              <div className="durationExercise">{exercise['exercise-routine'].duration}</div>
+              <div className="lapseExercise">{exercise['exercise-routine'].lapse}</div>
+              <div className="seriesExercise">{exercise['exercise-routine'].series}</div>
+              <div className="observationsExercise">{exercise['exercise-routine'].observations}</div>
+            </div>
+          );
+        })}
+      </div>
+    ); 
   };
 
   const getEmbedId = (url) => {
@@ -65,9 +73,7 @@ const RoutineHistory = () => {
   };
 
   return (
-    <div>
-      {displayRoutines()}
-    </div>
+    <div>{displayRoutines()}</div>
   );
 };
 
