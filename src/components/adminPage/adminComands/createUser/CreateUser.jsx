@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./createUser.css";
-import { createUser } from "../../../services/admin.service";
+import { createUser } from "../../../../services/admin.service";
 
 
 const CreateUser = ({ onClose }) => {
@@ -107,7 +107,7 @@ const CreateUser = ({ onClose }) => {
             </label>
             <input
               type="text"
-              name="phone"
+              name="password"
               className="form-control"
               value={inputData.password}
               onChange={(e) =>

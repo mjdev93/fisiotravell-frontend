@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import RoutineHistory from '../../components/userProfile/routineHistory/RoutineHistory'
+import RoutineHistory from '../../components/userProfile/RoutineHistory/RoutineHistory'
 import UserProfile from '../../components/userProfile/userInfo/UserProfile'
 import "./profile.css"
 import { InfoContext } from '../../context/infoContext';

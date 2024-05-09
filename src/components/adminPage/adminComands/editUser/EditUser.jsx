@@ -1,10 +1,46 @@
-import React from 'react'
-import "./updateUser.css"
+/* import React, { useRef, useState } from "react";
+import "./editUser.css";
+import { editUser } from "../../../../services/admin.service";
 
-const UpdateUser = () => {
+
+const EditUser = ({ onClose }) => {
+  const modalRef = useRef();
+
+  const closeEdit = (e) => {
+    if (modalRef.current === e.target) {
+      onClose();
+    }
+  };
+
+  const [inputData, setInputData] = useState({
+    name: "",
+    lastname: "", 
+    email: "",
+    phone: "",
+  });
+
+  const handleSubmit = async (e) => {
+     e.preventDefault(); 
+
+    try {
+  
+      const response = await editUser(inputData);
+
+    
+      console.log("Usuario editado:", response);
+
+  
+      onClose();
+    } catch (error) {
+      console.error("Error al editar usuario:", error);
+      
+    }
+  };
+
+   */
+
   return (
-    <div>
-      <div ref={modalRef} onClick={closeCreate}className="bg-formCreate">
+    <div ref={modalRef} onClick={closeEdit}className="bg-formCreate">
     <div  className="createUser-container">
       <form className="formCreateUser" onSubmit={handleSubmit}>
         <div className="info-card">
@@ -64,21 +100,6 @@ const UpdateUser = () => {
               }
             />
           </div>
-
-          <div>
-            <label className="create-label" htmlFor="password">
-              Contraseña
-            </label>
-            <input
-              type="text"
-              name="phone"
-              className="form-control"
-              value={inputData.password}
-              onChange={(e) =>
-                setInputData({ ...inputData, password: e.target.value })
-              }
-            />
-          </div>
           <br />
         </div>
         <button type="submit" className="bttn-submit">
@@ -87,9 +108,7 @@ const UpdateUser = () => {
       </form>
     </div>
     </div>
+  );
+};
 
-    </div>
-  )
-}
-
-export default UpdateUser
+export default EditUser;

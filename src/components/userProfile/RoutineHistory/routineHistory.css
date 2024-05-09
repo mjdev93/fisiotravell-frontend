@@ -2,7 +2,7 @@
     color: white;
     background-image: linear-gradient(to right, #1d4289, #ff808b);
     padding: 9px 4px 6px 4px;
-    width: 250px;
+    width: 150px;
     border-radius: 20px;
     font-size: 14px;
     font-weight: 500;
@@ -10,7 +10,7 @@
     transition: opacity 0.6s;
     list-style: none;
     margin-bottom: 10px;
- 
+    text-align: center;
 }
 .fechaProfileUser::-webkit-details-marker {
     display: none;
@@ -19,4 +19,94 @@
 
 .fechaProfileUser:hover {
     opacity: .8;
+}
+
+
+.containerExerciseRoutineProfileFirst{
+display: grid;
+grid-template-columns: 5% 23% 10% 11% 9% 37% 5%;
+width: 100%;
+position: relative;
+align-items: center;
+color: #1d4289;
+margin-top: 20px;
+}
+
+.textTopRoutines{
+display: grid;
+grid-template-columns: 5% 23% 10% 11% 9% 37% 5%;
+overflow: hidden;
+grid-column: 1 / 8;
+gap: 20px;
+font-weight: bold;
+}
+.nameHistory{
+grid-column: 2/3;
+margin-top: 4px;
+margin: 0;
+}
+.seriesHistory{
+    grid-column: 3/4;
+    margin: 0;
+}
+.repesHistory{
+    grid-column: 4/5;
+    margin: 0;
+}
+
+.duracionHistory{
+    grid-column: 5/6;
+    margin: 0;
+}
+
+.comentarioHistory{
+    grid-column: 6/7;
+    margin: 0;
+}
+
+.textTopRoutines> hr{
+    grid-column: 1/7;
+}
+
+.videoExerciseRoutine{
+grid-column: 2/3;
+
+
+}
+
+.durationExercise{
+grid-column: 3/4;
+
+
+}
+
+.lapseExercise{
+    grid-column: 4/5;
+    
+    
+}
+.seriesExercise{
+    grid-column: 5/6;
+    
+    
+}
+.observationsExercise{
+    grid-column: 6/7;
+    max-width: 330px;
+   text-wrap:balance;
+}
+
+.containerExerciseRoutineProfileSecond{
+    grid-column: 1/8;
+    display: grid;
+    grid-template-columns: 5% 23% 10% 11% 9% 37% 5%;
+    align-items: center;
+    row-gap: 10px;
+    column-gap: 22px;
+}
+
+.separacionBarra {
+    grid-column: 1/7;  
+    margin:20px;
+    width: 90%;
 }

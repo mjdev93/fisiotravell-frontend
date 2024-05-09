@@ -5,9 +5,6 @@ import Login from "../pages/logIn/Login.jsx";
 import SignUp from "../pages/Register/SignUp.jsx";
 import Admin from "../pages/admin/Admin.jsx";
 import Profile from "../pages/profile/Profile.jsx";
-import CreateUser from "../components/adminPage/createUser/CreateUser.jsx";
-
-
 
 const router = createBrowserRouter([
   {
@@ -25,20 +22,15 @@ const router = createBrowserRouter([
   {
     path: "/admin/",
     element: <Admin />,
-    
   },
   {
-    path: "/create",
-    element: <CreateUser />,
+    path: "/profile/",
+    element: <Profile />,
   },
-  // {
-  //   path: "/profile/",
-  //   element: <Profile />,
-  // },
   {
     path: "*",
     element: <NotFound />,
-  }
+  },
 ]);
 
 export default router;

@@ -16,7 +16,7 @@ const RoutineHistory = () => {
   }, []);
 
   const displayRoutines = () => {
-      const formatRoutines = myRoutines.map((routine, index) => {
+    const formatRoutines = myRoutines.map((routine, index) => {
       const extractedDate = routine.date;
       const niceDate = moment(extractedDate).format("D/MM/YYYY");
 
@@ -25,7 +25,7 @@ const RoutineHistory = () => {
           <details key={index} name="historyRoutine">
             <summary className="fechaProfileUser">{niceDate}</summary>
             <div>
-              <p>{displayExercises(routine.exercises)}</p>
+              {displayExercises(routine.exercises)}
             </div>
           </details>
           <hr key={index} />
@@ -37,17 +37,34 @@ const RoutineHistory = () => {
 
   const displayExercises = (exercises) => {
     console.log(exercises)
-    return exercises.map((exercise, index) => (
-      <div key={index}>
-        <p>{exercise.title}</p>
-        <p><YoutubeEmbed embedId={getEmbedId(exercise.videoUrl)} /></p>
-        <p>{exercise['exercise-routine'].duration}</p>
-        <p>{exercise['exercise-routine'].lapse}</p>
-        <p>{exercise['exercise-routine'].series}</p>
-        <p>{exercise['exercise-routine'].observations}</p>
-      </div>
-    ));
+    return (
+      <>
+        <div className="containerExerciseRoutineProfileFirst">
+          <div className="textTopRoutines">
+            <p className="nameHistory">Esguince</p>
+            <p className="seriesHistory">Series</p>
+            <p className="repesHistory">Repeticiones</p>
+            <p className="duracionHistory">Duración</p>
+            <p className="comentarioHistory">Comentarios</p>
+            
+          </div>
+          {exercises.map((exercise, index) => (
+            <div className= "containerExerciseRoutineProfileSecond" key={index}>
+              <hr className="separacionBarra" />
+              <div className="videoExerciseRoutine">
+                <YoutubeEmbed embedId={getEmbedId(exercise.videoUrl)} />
+              </div>
+              <div className="durationExercise">{exercise['exercise-routine'].duration}</div>
+              <div className="lapseExercise">{exercise['exercise-routine'].lapse}</div>
+              <div className="seriesExercise">{exercise['exercise-routine'].series}</div>
+              <div className="observationsExercise">{exercise['exercise-routine'].observations}</div>
+            </div>
+          ))}
+        </div>
+      </>
+    ); 
   };
+
   const getEmbedId = (url) => {
     const videoId = url.includes("youtu.be")
       ? url.split("/").pop()
@@ -59,7 +76,7 @@ const RoutineHistory = () => {
     <>
       <div>{displayRoutines()}</div>
     </>
-    
+
   );
 };
 
