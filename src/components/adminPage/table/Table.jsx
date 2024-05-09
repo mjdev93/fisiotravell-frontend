@@ -1,20 +1,28 @@
+import React, { useState } from "react";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 import { faUserPen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PropTypes } from "prop-types";
+import DeleteUser from "../adminComands/deleteUser/DeleteUser";
 import "./table.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.css";
 
 const Table = ({ data }) => {
-  console.log(data)
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedUserId, setSelectedUserId] = useState(null);
+  const [showDeleteModal, setShowDeleteModal] = useState(false); // Estado para controlar la visibilidad del modal
+
   const recordsPerPage = 8;
   const lastIndex = currentPage * recordsPerPage;
   const firstIndex = lastIndex - recordsPerPage;
   const records = data.slice(firstIndex, lastIndex);
   const npage = Math.ceil(data.length / recordsPerPage);
   const numbers = [...Array(npage + 1).keys()].slice(1);
+
+  const handleDeleteUser = (userId) => {
+    setSelectedUserId(userId);
+    setShowDeleteModal(true); // Mostrar el modal cuando se hace clic en eliminar
+  };
 
   return (
     <>
@@ -27,6 +35,7 @@ const Table = ({ data }) => {
               <th>APELLIDO</th>
               <th>EMAIL</th>
               <th>TELÉFONO</th>
+              <th>ACCIONES</th>
             </tr>
           </thead>
           <tbody className="tbody">
@@ -38,11 +47,18 @@ const Table = ({ data }) => {
                 <td>{item.email}</td>
                 <td>{item.phone} </td>
                 <td className="tIcons">
-                  <FontAwesomeIcon icon={faTrashCan} className="trashIcon" />
-                  <FontAwesomeIcon
-                    icon={faUserPen}
-                    className="fa-solid-fa-user-pen"
-                  />
+                  <button
+                    className="btn-icons"
+                    onClick={() => handleDeleteUser(item.id)}
+                  >
+                    <FontAwesomeIcon icon={faTrashCan} className="trashIcon" />
+                  </button>
+                  <button className="btn-icons">
+                    <FontAwesomeIcon
+                      icon={faUserPen}
+                      className="fa-solid-fa-user-pen"
+                    />
+                  </button>
                 </td>
               </tr>
             ))}
@@ -77,6 +93,7 @@ const Table = ({ data }) => {
           </ul>
         </nav>
       </div>
+      {showDeleteModal && <DeleteUser userId={selectedUserId} />}
     </>
   );
 

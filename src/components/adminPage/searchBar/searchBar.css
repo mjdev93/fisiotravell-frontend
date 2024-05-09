@@ -33,7 +33,7 @@
   
   .buttonCreate {
     color: white;
-    background-color: #ff808b;
+    background-image: linear-gradient(to right, #1d4289, #ff808b);
     margin-left: 8vw;
     padding: 10px 20px;
     border-radius: 20px;
@@ -67,8 +67,9 @@
     border-radius: 5px;
     margin: 20px auto;
     margin-left: 3vw;
-    position: fixed;
+    position:fixed;
   }
+  
 
 .search-container {
   height: 100vh;

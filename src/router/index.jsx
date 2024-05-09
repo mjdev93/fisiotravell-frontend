@@ -6,8 +6,6 @@ import SignUp from "../pages/Register/SignUp.jsx";
 import Admin from "../pages/admin/Admin.jsx";
 import Profile from "../pages/profile/Profile.jsx";
 
-
-
 const router = createBrowserRouter([
   {
     path: "/",
@@ -24,7 +22,6 @@ const router = createBrowserRouter([
   {
     path: "/admin/",
     element: <Admin />,
-    
   },
   {
     path: "/profile/",
@@ -33,7 +30,7 @@ const router = createBrowserRouter([
   {
     path: "*",
     element: <NotFound />,
-  }
+  },
 ]);
 
 export default router;

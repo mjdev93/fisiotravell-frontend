@@ -18,8 +18,25 @@ export const getMyRoutines = async () => {
     }
 }
 
+export const getMyexerciseRoutines= async () => {
+
+    const token = localStorage.getItem('token')
+  
+    try {
+      const { data } = await app.get('/exroutines/myExRoutines',
+        {
+          headers: {
+            Authorization: token,
+          },
+        }
+      )
+      
+      return data
+  
+    } catch (error) {
+      console.log('Error loging: ', error.message)
+    }
+  }
 
 
-
-
-
+  
