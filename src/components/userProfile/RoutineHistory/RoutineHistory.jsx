@@ -64,10 +64,12 @@ const RoutineHistory = () => {
       </>
     ); 
   };
+
   const getEmbedId = (url) => {
-    const regex = /\/embed\/([^\/\?]+)/;
-    const match = url.match(regex);
-    return match ? match[1] : null; 
+    const videoId = url.includes("youtu.be")
+      ? url.split("/").pop()
+      : url.split("v=")[1];
+    return videoId ? videoId : null;
   };
 
   return (
