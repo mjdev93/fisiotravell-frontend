@@ -38,6 +38,7 @@ grid-template-columns: 5% 23% 10% 11% 9% 37% 5%;
 overflow: hidden;
 grid-column: 1 / 8;
 gap: 20px;
+font-weight: bold;
 }
 .nameHistory{
 grid-column: 2/3;
@@ -100,10 +101,12 @@ grid-column: 3/4;
     display: grid;
     grid-template-columns: 5% 23% 10% 11% 9% 37% 5%;
     align-items: center;
-    gap: 20px;
+    row-gap: 10px;
+    column-gap: 22px;
 }
 
 .separacionBarra {
-    grid-column: 1/8;  
+    grid-column: 1/7;  
     margin:20px;
+    width: 90%;
 }
