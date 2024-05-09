@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import "./createUser.css";
-import { createUser } from "../../../services/admin.service";
+import { createUser } from "../../../../services/admin.service";
 
 
 const CreateUser = ({ onClose }) => {

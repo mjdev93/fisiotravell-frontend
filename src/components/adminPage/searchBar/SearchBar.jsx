@@ -2,7 +2,7 @@ import "./searchBar.css";
 import { useContext, useEffect, useState } from "react";
 import Table from "../table/Table";
 import { getAllUsers } from "../../../services/admin.service"
-import CreateUser from "../createUser/CreateUser";
+import CreateUser from "../adminComands/createUser/CreateUser";
 import { InfoContext } from "../../../context/infoContext";
 
 

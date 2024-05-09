@@ -1,10 +1,46 @@
-import React from 'react'
-import "./updateUser.css"
+import React, { useRef, useState } from "react";
+import "./createUser.css";
+import { createUser } from "../../../../services/admin.service";
 
-const UpdateUser = () => {
+
+const CreateUser = ({ onClose }) => {
+  const modalRef = useRef();
+
+  const closeCreate = (e) => {
+    if (modalRef.current === e.target) {
+      onClose();
+    }
+  };
+
+  const [inputData, setInputData] = useState({
+    name: "",
+    lastname: "", 
+    email: "",
+    phone: "",
+  });
+
+  const handleSubmit = async (e) => {
+     e.preventDefault(); 
+
+    try {
+  
+      const response = await createUser(inputData);
+
+    
+      console.log("Usuario creado:", response);
+
+  
+      onClose();
+    } catch (error) {
+      console.error("Error al crear usuario:", error);
+      
+    }
+  };
+
+  
+
   return (
-    <div>
-      <div ref={modalRef} onClick={closeCreate}className="bg-formCreate">
+    <div ref={modalRef} onClick={closeCreate}className="bg-formCreate">
     <div  className="createUser-container">
       <form className="formCreateUser" onSubmit={handleSubmit}>
         <div className="info-card">
@@ -87,9 +123,7 @@ const UpdateUser = () => {
       </form>
     </div>
     </div>
+  );
+};
 
-    </div>
-  )
-}
-
-export default UpdateUser
+export default CreateUser;

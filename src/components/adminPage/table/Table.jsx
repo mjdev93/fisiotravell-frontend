@@ -14,6 +14,7 @@ const Table = ({ data }) => {
   const records = data.slice(firstIndex, lastIndex);
   const npage = Math.ceil(data.length / recordsPerPage);
   const numbers = [...Array(npage + 1).keys()].slice(1);
+  
 
   return (
     <>
@@ -26,7 +27,6 @@ const Table = ({ data }) => {
               <th>APELLIDO</th>
               <th>EMAIL</th>
               <th>TELÉFONO</th>
-              <th>CONTRASEÑA</th>
             </tr>
           </thead>
           <tbody className="tbody">
@@ -37,7 +37,6 @@ const Table = ({ data }) => {
                 <td>{item.lastname}</td>
                 <td>{item.email}</td>
                 <td>{item.phone} </td>
-                <td>{item.password} </td>
                 <td className="tIcons">
                   <button className="btn-icons">
                     <FontAwesomeIcon icon={faTrashCan} className="trashIcon" />
