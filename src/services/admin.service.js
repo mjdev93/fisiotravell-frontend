@@ -40,6 +40,7 @@ export const createUser = async (userData) => {
     return data;
   } catch (error) {
     console.log("Error al crear usuario", error);
+    throw error
   }
 };
 
@@ -77,10 +78,43 @@ export const deleteUser = async (userId) => {
       },
     });
 
-    console.log(data);
     return data;
   } catch (error) {
     console.log(error);
     throw new Error("Something went wrong");
   }
 };
+
+
+
+export const enterProfile = async (userId) => {
+  const token = localStorage.getItem("token");
+  try {
+    const { data } = await api.get(`/user/${userId}`,{
+      headers:{
+        token: token,
+      }
+    })
+    return data;
+  } catch (error) {
+    throw new Error ("Something went wrong")
+    
+  }
+}
+
+export const enterExerciseRoutines = async (userId) => {
+  const token = localStorage.getItem("token");
+  try {
+    const { data } = await api.get(`/exroutine/userExRoutines/${userId}`,{
+      headers:{
+        token: token,
+      }
+    })
+    console.log("PATATA" , data)
+    return data;
+  } catch (error) {
+    console.log(error)
+    throw new Error ("Something went wrong")
+    
+  }
+}
