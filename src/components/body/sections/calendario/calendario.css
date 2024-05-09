@@ -3,7 +3,7 @@
     grid-template-columns: 5% 30% 30% 30% 5%;
     display: grid;
     width: 100%;
-    
+    padding-bottom: 30px;
 }
 .calendarioMaria{
     grid-column: 2/ 3;
