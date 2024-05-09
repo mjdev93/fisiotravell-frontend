@@ -53,7 +53,9 @@ export const createUser = async (userData) => {
 //         lastname: userData.lastname,
 //         email: userData.email,
 //         phone: userData.phone,
-//         // Puedes incluir aquí cualquier otro campo que desees editar
+//         password: userData.password,
+
+
 //       },
 //       {
 //         headers: {
