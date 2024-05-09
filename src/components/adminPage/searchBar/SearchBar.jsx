@@ -45,7 +45,7 @@ function SearchBar() {
             Crear Usuario
           </button>
           {showCreateUser && (
-            <CreateUser onClose={() => setShowCreateUser(false)} />
+            <CreateUser onClose={() => setShowCreateUser(false)} /> 
           )}
         </div>
 

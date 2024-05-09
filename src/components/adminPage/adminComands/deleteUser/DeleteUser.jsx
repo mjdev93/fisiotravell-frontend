@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { deleteUser } from "../../../../services/admin.service";
+import './deleteUser.css'
 
 export const DeleteUser = ({ userId }) => {
   const [showConfirmation, setShowConfirmation] = useState(false);
@@ -15,20 +16,19 @@ export const DeleteUser = ({ userId }) => {
   };
 
   return (
-    <div>
+<div className="container">
       {showConfirmation ? (
-        <div>
-          ¿Estás seguro de que deseas borrar este usuario?
-          <button onClick={handleDelete}>Sí</button>
-          <button onClick={() => setShowConfirmation(false)}>No</button>
+        <div className="confirmation">
+          <p className="text">¿Estás seguro de que deseas borrar este usuario?</p>
+          <button className="button green" onClick={handleDelete}>Sí</button>
+          <button className="button red" onClick={() => setShowConfirmation(false)}>No</button>
         </div>
       ) : (
-        <button onClick={() => setShowConfirmation(true)}>
-          Eliminar usuario
-        </button>
+        <button className="deleteButton" onClick={() => setShowConfirmation(true)}>Eliminar usuario</button>
       )}
     </div>
   );
 };
+
 
 export default DeleteUser;

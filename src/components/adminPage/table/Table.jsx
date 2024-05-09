@@ -54,24 +54,18 @@ const Table = ({ data }) => {
           </thead>
           <tbody className="tbody">
             {records.map((item) => (
-              <tr key={item.id} className="listData" onClick={() => handleProfileClick(item.id)}>
-                <td>{item.id}</td>
-                <td>{item.name}</td>
-                <td>{item.lastname}</td>
-                <td>{item.email}</td>
-                <td>{item.phone} </td>
+              <tr key={item.id} className="listData">
+                <td onClick={() => handleProfileClick(item.id)}>{item.id}</td>
+                <td onClick={() => handleProfileClick(item.id)}>{item.name}</td>
+                <td onClick={() => handleProfileClick(item.id)}>{item.lastname}</td>
+                <td onClick={() => handleProfileClick(item.id)}>{item.email}</td>
+                <td onClick={() => handleProfileClick(item.id)}>{item.phone} </td>
                 <td className="tIcons">
                   <button
                     className="btn-icons"
                     onClick={() => handleDeleteUser(item.id)}
                   >
                     <FontAwesomeIcon icon={faTrashCan} className="trashIcon" />
-                  </button>
-                  <button className="btn-icons">
-                    <FontAwesomeIcon
-                      icon={faUserPen}
-                      className="fa-solid-fa-user-pen"
-                    />
                   </button>
                 </td>
               </tr>
