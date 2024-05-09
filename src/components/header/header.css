@@ -128,7 +128,9 @@ header>.text>h2 {
     height: 50px;
 }
 
-
+.main-header > .text > h2 {
+    font-size:42px;
+}
 
 
 
