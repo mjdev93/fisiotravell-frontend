@@ -105,8 +105,21 @@
 @media screen and (max-width: 1500px) {
     .slick-prev {
         margin-left: -20px;
-    } 
+    }
+
     .slick-next {
         margin-right: 20px;
+    }
+}
+
+@media screen and (min-width: 1590px) {
+    .slick-prev,
+    .slick-next {
+        z-index: 999;
+    }
+
+    .slick-prev:before,
+    .slick-next:before {
+        color: #ff808b !important;
     }
 }
