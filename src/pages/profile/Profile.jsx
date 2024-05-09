@@ -5,6 +5,7 @@ import "./profile.css"
 import { InfoContext } from '../../context/infoContext';
 
 
+
 const Profile = () => {
   const {info, setInfo} = useContext(InfoContext)
   return (
