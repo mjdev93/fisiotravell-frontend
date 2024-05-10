@@ -24,6 +24,8 @@ const SignUpForm = () => {
   const emailRef = useRef();
   const errRef = useRef();
 
+  const [userId, setUserId] = useState(null);
+
   const [user, setUser] = useState("");
   const [validUser, setValidUser] = useState(false);
   const [userFocus, setUserFocus] = useState(false);
@@ -51,8 +53,8 @@ const SignUpForm = () => {
   const [errMsg, setErrMsg] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const {setInfo} = useContext(InfoContext)
-
+  const { info , setInfo } = useContext(InfoContext);
+  
   useEffect(() => {
     emailRef.current.focus();
   }, []);
@@ -99,11 +101,13 @@ const SignUpForm = () => {
     }
     try {
       const response = await signUp2(user, lastName, email, pass, phone);
-      
+
       if (response) {
-          console.log(response.newUser)
-          setInfo(response.newUser)
-          setSuccess(true);
+        console.log(response.newUser);
+        setInfo(response.newUser);
+        setUserId(info.id)
+        setSuccess(true);
+        
       }
     } catch (error) {
       if (!error?.response) {
@@ -129,7 +133,7 @@ const SignUpForm = () => {
               alt="Logo de Fisio Travell"
             />
             <button className="successButton">
-              <Link to="/profile">Accede</Link>
+              <Link to={`/profile/${userId}`}>Accede</Link>
             </button>
           </div>
         </div>

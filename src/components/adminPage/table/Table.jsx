@@ -9,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { useNavigate } from "react-router-dom";
 
 const Table = ({ data }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedUserId, setSelectedUserId] = useState(null);
   const [showDeleteModal, setShowDeleteModal] = useState(false); 
@@ -35,6 +35,10 @@ const Table = ({ data }) => {
     } catch (error) {
       console.error("Error al obtener datos del usuario:", error);
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowDeleteModal(false);
   };
 
   return (
@@ -107,7 +111,11 @@ const Table = ({ data }) => {
           </ul>
         </nav>
       </div>
+<<<<<<< HEAD
       
+=======
+      {showDeleteModal && <DeleteUser userId={selectedUserId} onClose={handleCloseModal} />}
+>>>>>>> 6d381ef19c2f46046b104951e3dbe2b871eefc15
     </>
   );
 
