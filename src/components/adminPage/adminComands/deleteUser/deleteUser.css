@@ -1,0 +1,96 @@
+.bg-form-delete {
+    position: fixed;
+    inset: 0;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1px);
+   
+}
+
+
+
+
+
+.container-delete {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #0056b3; /* Agregamos el borde */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 50vw;
+    z-index: 9999;
+}
+
+.cdeleteUser-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 50vw;
+}
+
+.confirmation-tex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-red {
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #dc3545;
+    color: #fff;
+}
+
+.button-green {
+    margin: 5px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+}
+
+
+.deleteButton {
+    background-color: #dc3545;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.deleteButton:hover {
+    background-color: #c82333;
+}
+
+.text-sure {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+
+
+.container-delete-button {
+    margin: 10vh auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 55vw;
+    height: 85vh;
+}

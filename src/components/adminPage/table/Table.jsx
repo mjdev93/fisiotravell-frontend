@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
-import { faUserPen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PropTypes } from "prop-types";
 import DeleteUser from "../adminComands/deleteUser/DeleteUser";
@@ -40,6 +39,7 @@ const Table = ({ data }) => {
 
   return (
     <>
+    
       <div className="table-container">
         <table className="table">
           <thead>
@@ -67,11 +67,17 @@ const Table = ({ data }) => {
                   >
                     <FontAwesomeIcon icon={faTrashCan} className="trashIcon" />
                   </button>
+                  
+                  
                 </td>
+                
               </tr>
             ))}
           </tbody>
+          
         </table>
+        {showDeleteModal && <DeleteUser userId={selectedUserId} />}
+        
         <nav className="pagination-container">
           <ul className="pagination justify-content-center">
             <li className="page-item">
@@ -101,7 +107,7 @@ const Table = ({ data }) => {
           </ul>
         </nav>
       </div>
-      {showDeleteModal && <DeleteUser userId={selectedUserId} />}
+      
     </>
   );
 
