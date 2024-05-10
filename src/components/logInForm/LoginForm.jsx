@@ -10,7 +10,8 @@ export const LoginForm = () => {
   const [password, setPassword] = useState("");
   const [logged, setLogged] = useState(false);
   const [error, setError] = useState(null);
-  const {setInfo} = useContext(InfoContext);
+  const [userId, setUserId] = useState(null)
+  const {info} = useContext(InfoContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -25,7 +26,7 @@ export const LoginForm = () => {
 
   return (
     <div className="logContainer">
-      {logged && <Navigate to="/profile/:profileId" />}
+      {logged && <Navigate to={`/profile/&{userId}`} />}
       <div className="logBox">
         <img src={logo} className="successIcon" alt="Logo de Fisio Travell" />
         <h1>Accede</h1>
