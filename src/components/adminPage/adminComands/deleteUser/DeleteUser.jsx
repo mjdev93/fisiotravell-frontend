@@ -15,7 +15,6 @@ const DeleteUser = ({ userId, onClose }) => {
     try {
       console.log(userId);
       await deleteUser(userId);
-      setShowConfirmation(false);
       onClose();
     } catch (error) {
       console.log("no se ha podido borrar el usuario", error);
