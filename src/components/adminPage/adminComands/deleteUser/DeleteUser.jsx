@@ -28,23 +28,20 @@ const DeleteUser = ({ userId, onClose }) => {
 
   return (
     <div ref={modalRef} onClick={closeDelete} className="containerpopup">
-      <div className="overlaypopup"></div>
       <div className="popup">
-        <div className="confirmationpopup">
-          <p className="text">
-            ¿Estás seguro de que deseas borrar este usuario?
-          </p>
-          <div className="button-containerpopup">
-            <button className="buttonpopup Acceptpopup" onClick={handleDelete}>
-              Sí
-            </button>
-            <button
-              className="buttonpopup Rejectpopup"
-              onClick={handleNoButtonClick}
-            >
-              No
-            </button>
-          </div>
+        <p className="textpopup">
+          ¿Estás seguro de que deseas borrar este usuario?
+        </p>
+        <div className="button-containerpopup">
+          <button className="buttonpopup Acceptpopup" onClick={handleDelete}>
+            Sí
+          </button>
+          <button
+            className="buttonpopup Rejectpopup"
+            onClick={handleNoButtonClick}
+          >
+            No
+          </button>
         </div>
       </div>
     </div>

@@ -18,10 +18,6 @@
     position: relative;
   }
   
-  .confirmationpopup {
-    margin-bottom: 10px;
-  }
-  
   .button-containerpopup {
     display: flex;
     justify-content: center;
@@ -33,22 +29,17 @@
     cursor: pointer;
   }
   
-  .buttonAcceptpopup {
-    background-color: #4caf50;
+  .Acceptpopup {
+    background-color: #1d4289;
     color: white;
   }
   
-  .buttonRejectpopup {
-    background-color: #f44336;
+  .Rejectpopup {
+    background-color: #1d4289;
     color: white;
   }
   
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    cursor: pointer;
+  .buttonpopup:hover {
+    background-color: #ff808b;
   }
   
