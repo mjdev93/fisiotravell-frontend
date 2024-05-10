@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from "react";
-
 import { getMyRoutines } from "../../../services/history.service";
 import { enterExerciseRoutines } from "../../../services/admin.service";
 import moment from "moment/moment";
@@ -9,15 +8,18 @@ import uniqid from "uniqid";
 import { InfoContext } from "../../../context/infoContext";
 import { useParams } from "react-router-dom";
 import lapiz from '/images/lapiz.webp'
+import EditRoutine from "../editRoutine/EditRoutine";
 
 
 
 
-const RoutineHistory = () => {
+const RoutineHistory = ({functionShowEditRoutine}) => {
   const {profileId} = useParams()
   const [myRoutines, setMyRoutines] = useState([]);
+  
   const { info } = useContext(InfoContext);
   console.log(info)
+
 
   useEffect(() => {
     const fetchMyRoutines = async () => {
@@ -60,9 +62,17 @@ const RoutineHistory = () => {
     return formatRoutines;
   };
 
+const openEditRoutine = () => {
+  functionShowEditRoutine(true)
+}
+
+
+
+
   const displayExercises = (exercises) => {
     return (
       <>
+      
       
       <div className="containerExerciseRoutineProfileFirst">
         <div className="textTopRoutines">
@@ -71,7 +81,7 @@ const RoutineHistory = () => {
           <p className="repesHistory">Repeticiones</p>
           <p className="duracionHistory">Duración</p>
           <p className="comentarioHistory">Comentarios</p>
-          {info?.role === "admin" && <button className="editarRoutine"><img src={lapiz} alt="icono de lápiz para editar la rutina"/></button>}
+          {info?.role === "admin" && <button onClick={openEditRoutine} className="editarRoutine"><img src={lapiz} alt="icono de lápiz para editar la rutina"/></button>}
         </div>
         {exercises?.map((exercise) => {
           const exerciseId = uniqid();
