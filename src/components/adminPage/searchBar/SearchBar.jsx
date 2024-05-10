@@ -4,6 +4,8 @@ import Table from "../table/Table";
 import { getAllUsers } from "../../../services/admin.service";
 import CreateUser from "../adminComands/createUser/CreateUser";
 import { InfoContext } from "../../../context/infoContext";
+import logo from "/images/logofisiotravell-blanco.webp";
+import { Link } from "react-router-dom";
 
 function SearchBar() {
   const [query, setQuery] = useState("");
@@ -36,18 +38,27 @@ function SearchBar() {
     <div className="search-container">
       <div className="bodySearch">
         <div className="adminHeader">
+          <div className="hello-bttn-create">
           <h2 className="hello">Hola, {info?.name}</h2>
-
           <button
             onClick={() => setShowCreateUser(true)}
             className="buttonCreate"
           >
             Crear Usuario
           </button>
+          </div>
+          <div className="log-div-header-admin">
+          <Link to="/">
+            <img className="logo-admin-to-home" src={logo} alt="Logo de Fisio Travell" />
+          </Link>
+          </div>
+
+          
           {showCreateUser && (
             <CreateUser onClose={() => setShowCreateUser(false)} /> 
           )}
         </div>
+        
 
         <input
           className="search"

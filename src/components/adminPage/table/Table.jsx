@@ -111,11 +111,7 @@ const Table = ({ data }) => {
           </ul>
         </nav>
       </div>
-<<<<<<< HEAD
-      
-=======
       {showDeleteModal && <DeleteUser userId={selectedUserId} onClose={handleCloseModal} />}
->>>>>>> 6d381ef19c2f46046b104951e3dbe2b871eefc15
     </>
   );
 
