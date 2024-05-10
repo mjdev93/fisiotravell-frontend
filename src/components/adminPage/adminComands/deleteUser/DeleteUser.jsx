@@ -1,34 +1,50 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { deleteUser } from "../../../../services/admin.service";
-import './deleteUser.css'
+import "./deleteUser.css";
 
-export const DeleteUser = ({ userId }) => {
-  const [showConfirmation, setShowConfirmation] = useState(false);
+const DeleteUser = ({ userId, onClose }) => {
+  const modalRef = useRef();
+
+  const closeDelete = (e) => {
+    if (modalRef.current === e.target) {
+      onClose();
+    }
+  };
 
   const handleDelete = async () => {
     try {
       console.log(userId);
       await deleteUser(userId);
-      setShowConfirmation(false);
+      onClose();
     } catch (error) {
       console.log("no se ha podido borrar el usuario", error);
     }
   };
 
+  const handleNoButtonClick = () => {
+    onClose();
+  };
+
   return (
-<div className="container">
-      {showConfirmation ? (
-        <div className="confirmation">
-          <p className="text">¿Estás seguro de que deseas borrar este usuario?</p>
-          <button className="button green" onClick={handleDelete}>Sí</button>
-          <button className="button red" onClick={() => setShowConfirmation(false)}>No</button>
+    <div ref={modalRef} onClick={closeDelete} className="containerpopup">
+      <div className="popup">
+        <p className="textpopup">
+          ¿Estás seguro de que deseas borrar este usuario?
+        </p>
+        <div className="button-containerpopup">
+          <button className="buttonpopup Acceptpopup" onClick={handleDelete}>
+            Sí
+          </button>
+          <button
+            className="buttonpopup Rejectpopup"
+            onClick={handleNoButtonClick}
+          >
+            No
+          </button>
         </div>
-      ) : (
-        <button className="deleteButton" onClick={() => setShowConfirmation(true)}>Eliminar usuario</button>
-      )}
+      </div>
     </div>
   );
 };
-
 
 export default DeleteUser;
