@@ -34,7 +34,7 @@ margin-top: 20px;
 
 .textTopRoutines{
 display: grid;
-grid-template-columns: 5% 23% 10% 11% 9% 37% 5%;
+grid-template-columns: 5% 23% 10% 11% 9% 22% 5%;
 overflow: hidden;
 grid-column: 1 / 8;
 gap: 20px;
@@ -94,6 +94,20 @@ grid-column: 3/4;
     grid-column: 6/7;
     max-width: 330px;
    text-wrap:balance;
+}
+
+.editarRoutine {
+    grid-column: 7/8;
+    background: none;
+    border: none;
+}
+.editarRoutine>img{
+    width: 30px;
+    height: 30px;
+}
+
+.editarRoutine:hover {
+opacity: 0.6;
 }
 
 .containerExerciseRoutineProfileSecond{

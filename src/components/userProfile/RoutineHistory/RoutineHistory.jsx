@@ -8,6 +8,10 @@ import "./routineHistory.css";
 import uniqid from "uniqid";
 import { InfoContext } from "../../../context/infoContext";
 import { useParams } from "react-router-dom";
+import lapiz from '/images/lapiz.webp'
+
+
+
 
 const RoutineHistory = () => {
   const {profileId} = useParams()
@@ -45,7 +49,6 @@ const RoutineHistory = () => {
 
       return (
         <div key={routineId}>
-          {info?.role === "admin" && <button className="asdasd">Editar</button>}
           <details name="historyRoutine">
             <summary className="fechaProfileUser">{niceDate}</summary>
             <div>{displayExercises(routine.exercises)}</div>
@@ -62,13 +65,13 @@ const RoutineHistory = () => {
       <>
       
       <div className="containerExerciseRoutineProfileFirst">
-      {info?.role === "admin" && <button className="asdasd">Editar</button>}
         <div className="textTopRoutines">
           <p className="nameHistory">Esguince</p>
           <p className="seriesHistory">Series</p>
           <p className="repesHistory">Repeticiones</p>
           <p className="duracionHistory">Duración</p>
           <p className="comentarioHistory">Comentarios</p>
+          {info?.role === "admin" && <button className="editarRoutine"><img src={lapiz} alt="icono de lápiz para editar la rutina"/></button>}
         </div>
         {exercises?.map((exercise) => {
           const exerciseId = uniqid();
