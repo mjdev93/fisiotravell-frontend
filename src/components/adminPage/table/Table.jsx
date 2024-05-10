@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
-import { faUserPen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PropTypes } from "prop-types";
 import DeleteUser from "../adminComands/deleteUser/DeleteUser";
@@ -10,7 +9,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import { useNavigate } from "react-router-dom";
 
 const Table = ({ data }) => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedUserId, setSelectedUserId] = useState(null);
   const [showDeleteModal, setShowDeleteModal] = useState(false); 
@@ -36,6 +35,10 @@ const Table = ({ data }) => {
     } catch (error) {
       console.error("Error al obtener datos del usuario:", error);
     }
+  };
+
+  const handleCloseModal = () => {
+    setShowDeleteModal(false);
   };
 
   return (
@@ -101,7 +104,7 @@ const Table = ({ data }) => {
           </ul>
         </nav>
       </div>
-      {showDeleteModal && <DeleteUser userId={selectedUserId} />}
+      {showDeleteModal && <DeleteUser userId={selectedUserId} onClose={handleCloseModal} />}
     </>
   );
 
