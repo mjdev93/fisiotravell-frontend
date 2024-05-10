@@ -25,7 +25,7 @@ export const LoginForm = () => {
 
   return (
     <div className="logContainer">
-      {logged && <Navigate to="/profile" />}
+      {logged && <Navigate to="/profile/:profileId" />}
       <div className="logBox">
         <img src={logo} className="successIcon" alt="Logo de Fisio Travell" />
         <h1>Accede</h1>

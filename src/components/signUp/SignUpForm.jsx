@@ -129,7 +129,7 @@ const SignUpForm = () => {
               alt="Logo de Fisio Travell"
             />
             <button className="successButton">
-              <Link to="/profile">Accede</Link>
+              <Link to="/profile/:profileId">Accede</Link>
             </button>
           </div>
         </div>
