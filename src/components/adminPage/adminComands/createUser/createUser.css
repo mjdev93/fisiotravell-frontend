@@ -12,6 +12,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    padding: none;
+   
 }
 
 .createUser-container {
@@ -24,8 +26,8 @@
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    width: 50vw;
-    height: 80vh;
+    width: 55vw;
+    height: 85vh;
 }
 
 .create-label {
@@ -39,13 +41,18 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 35vw;
-
-   
-    
+    align-items: stretch; /* Añadimos esta línea para centrar horizontalmente */
+    width: 40vw;
 }
 
 
+
+.formCreateUser{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Ajusta el espacio entre el botón y el info-card según sea necesario */
+  }
 
 .info-card label {
     display: block;
@@ -85,6 +92,7 @@
     transition: border-color 0.25s;
     padding: 8px 3px 5px 3px;
     width: 140px;
+    margin-top: -20px;
 }
 
 .bttn-submit:hover {
