@@ -17,8 +17,8 @@ function PostRoutine() {
     e.preventDefault();
     try {
       await postNewRoutine(userId, date, exercises);
-      setMessage('Rutina creada exitosamente');
-      window.location.reload();
+       setMessage('Rutina creada exitosamente');
+       window.location.reload();
     } catch (error) {
       console.error('Error al crear la rutina:', error);
       setMessage('Hubo un error al crear la rutina');
@@ -34,11 +34,6 @@ function PostRoutine() {
       observations: observations
     };
     setExercises([...exercises, newExercise]);
-    setExerciseId('');
-    setSeries('');
-    setDuration('');
-    setLapse('');
-    setObservations('');
   };
 
   return (
@@ -75,6 +70,7 @@ function PostRoutine() {
           Observaciones:
           <input type="text" value={observations} onChange={(e) => setObservations(e.target.value)} />
         </label>
+        <button type="button" onClick={handleAddExercise}>Agregar Ejercicio</button>
         <br />
         <button type="submit">Crear Rutina</button>
       </form>
