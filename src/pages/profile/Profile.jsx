@@ -11,7 +11,7 @@ const Profile = () => {
   const [showEditRoutine, setShowEditRoutine] = useState(false)
   return (
     <>
-    {showEditRoutine && <EditRoutine/>}
+    {showEditRoutine && <EditRoutine setShowEditRoutine={setShowEditRoutine}/>}
     <header className="headerProfile"> 
     <h1 className='nameUserHeader'>{info?.name} {info?.lastname}</h1>
     <div className='containerFormitasHeader'></div>
