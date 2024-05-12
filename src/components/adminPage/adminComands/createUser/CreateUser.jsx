@@ -17,6 +17,7 @@ const CreateUser = ({ onClose }) => {
     lastname: "", 
     email: "",
     phone: "",
+    password: "",
   });
 
   const handleSubmit = async (e) => {

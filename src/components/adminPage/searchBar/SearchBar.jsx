@@ -4,7 +4,7 @@ import Table from "../table/Table";
 import { getAllUsers } from "../../../services/admin.service";
 import CreateUser from "../adminComands/createUser/CreateUser";
 import { InfoContext } from "../../../context/infoContext";
-import logo from "/images/logofisiotravell-blanco.webp";
+import logo from "/images/logofisiotravelloutline.png";
 import { Link } from "react-router-dom";
 
 function SearchBar() {
