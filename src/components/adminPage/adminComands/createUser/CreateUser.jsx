@@ -117,9 +117,11 @@ const CreateUser = ({ onClose }) => {
           </div>
           <br />
         </div>
+        <div className="bttn-create-user">
         <button type="submit" className="bttn-submit">
-          Submit
+          Crear Usuario
         </button>
+        </div>
       </form>
     </div>
     </div>

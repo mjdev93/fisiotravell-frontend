@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import RoutineHistory from '../../components/userProfile/RoutineHistory/RoutineHistory'
 import UserProfile from '../../components/userProfile/userInfo/UserProfile'
+import PostRoutine from '../../components/adminPage/adminComands/postRoutine/PostRoutine';
 import "./profile.css"
 import { InfoContext } from '../../context/infoContext';
 import {EditRoutine} from '../../components/userProfile/editRoutine/EditRoutine'
@@ -24,6 +25,9 @@ const Profile = () => {
       <h2 className='titleHistoryRoutine'>Historial de rutinas</h2>
     <RoutineHistory
     functionShowEditRoutine={setShowEditRoutine}/>
+    </div>
+    <div>
+    <PostRoutine />
     </div>
     <div className='formitaDerechaProfile'></div>
     

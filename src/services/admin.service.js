@@ -110,7 +110,6 @@ export const enterExerciseRoutines = async (userId) => {
         token: token,
       }
     })
-    console.log("PATATA" , data)
     return data;
   } catch (error) {
     console.log(error)
@@ -118,3 +117,28 @@ export const enterExerciseRoutines = async (userId) => {
     
   }
 }
+
+export const postNewRoutine = async (userId, date, exercises) => {
+  const token = localStorage.getItem("token");
+  
+  try {
+    const response = await api.post(`/exroutine/${userId}`, {
+      userId: userId,
+      date: date,
+      exercises: exercises,
+    }, {
+      headers: {
+        token: token,        
+      }
+    });
+
+    return response.data;
+  } catch (error) {
+    console.error("Error al crear la rutina:", error);
+    throw error;
+  }
+}
+
+
+
+

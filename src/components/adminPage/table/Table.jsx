@@ -43,6 +43,7 @@ const Table = ({ data }) => {
 
   return (
     <>
+    
       <div className="table-container">
         <table className="table">
           <thead>
@@ -70,11 +71,17 @@ const Table = ({ data }) => {
                   >
                     <FontAwesomeIcon icon={faTrashCan} className="trashIcon" />
                   </button>
+                  
+                  
                 </td>
+                
               </tr>
             ))}
           </tbody>
+          
         </table>
+        {showDeleteModal && <DeleteUser userId={selectedUserId} />}
+        
         <nav className="pagination-container">
           <ul className="pagination justify-content-center">
             <li className="page-item">
