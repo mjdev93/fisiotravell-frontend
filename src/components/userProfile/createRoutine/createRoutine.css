@@ -1,47 +1,30 @@
-.dialogContainer {
-    width: 1200px;
-    min-height: 600px;
-    z-index: 999;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 30px;
-    border-color: #1d4289;
-    display: grid;
-    grid-template-columns: 40% 10px 60%;
-    position: fixed;
-}
 
-.searchExercise {
+
+.searchExercise1 {
     grid-column: 1/2;
     display: grid;
-    grid-template-rows: 130px 1fr;
+    grid-template-rows: 40px 1fr;
 }
 
-.searchExercisePopup {
+.searchExercisePopup2 {
     grid-row: 1/2;
     padding-left: 10px;
     padding-top: 10px;
     position: relative;
+    grid-template-columns: 10% 1fr;
+    display:grid;
 }
 
-.addExercise {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    width: 185px;
+.searchExercisePopup2ID {
+    grid-column: 1/2;
+    color:#1d4289;
 }
 
-.searchExercisePopup>label {
-    width: 100%;
-    color: #1d4289;
+.searchExercisePopup2Ejercicio {
+    grid-column: 2/3;
+    color:#1d4289;
 }
 
-.searchExercisePopup>input {
-    border-radius: 5px;
-    border-color: #1d4289;
-    height: 32px;
-}
 
 .listExercisePopup {
     grid-row: 2/3;
@@ -87,17 +70,17 @@ justify-items: center;
     grid-row: 3 / 4;
 }
 
-.aceptChanges {
+.createRoutineChanges {
     position: absolute;
     bottom: 10px;
-    left: 82%;
-    width: 120px;
+    left: 45%;
+    width: 150px;
 }
 
-.discardChanges {
+.closedialog {
     position: absolute;
     bottom: 10px;
-    left: 63%;
+    left: 70%;
     width: 120px;
 }
 
@@ -156,6 +139,35 @@ justify-items: center;
     width: 100%;
     padding: 20px 30px;
     grid-row: 1 / 2;
+}
+
+.nameRoutineContainerPopup > form {
+    color:#1d4289;
+}
+
+.nameRoutineContainerPopup > form > label {
+    width:100%
+}
+
+.nameRoutineContainerPopup > form > input {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-color: #1d4289;
+    height: 32px;
+}
+
+.observacion-container-routine {
+    position:absolute;
+    right:100px;
+    top: 130px
+}
+
+.observacion-container-routine > textarea {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border-color: #1d4289;
+    height: 100px;
+    width: 300px;
 }
 
 .selectedExercisesContainer {

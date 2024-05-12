@@ -37,7 +37,7 @@ const EditUser = ({ onClose }) => {
     }
   };
 
-   */
+   
 
   return (
     <div ref={modalRef} onClick={closeEdit}className="bg-formCreate">
@@ -112,3 +112,5 @@ const EditUser = ({ onClose }) => {
 };
 
 export default EditUser;
+
+*/

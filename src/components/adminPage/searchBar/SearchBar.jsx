@@ -47,11 +47,10 @@ function SearchBar() {
             Crear Usuario
           </button>
           </div>
-          <div className="log-div-header-admin">
-          <Link to="/">
-            <img className="logo-admin-to-home" src={logo} alt="Logo de Fisio Travell" />
-          </Link>
-          </div>
+   
+      
+            <button className="pretty backbuttonadmin"><Link to="/">Volver la back</Link></button>
+          
 
           
           {showCreateUser && (
@@ -62,7 +61,7 @@ function SearchBar() {
 
         <input
           className="search"
-          placeholder="search..."
+          placeholder="Search..."
           onChange={(e) => setQuery(e.target.value.toLowerCase())}
         />
 

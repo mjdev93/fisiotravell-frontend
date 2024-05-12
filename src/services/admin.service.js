@@ -139,6 +139,19 @@ export const postNewRoutine = async (userId, date, exercises) => {
   }
 }
 
-
+export const getAllExercises = async () => {
+  const token = localStorage.getItem("token");
+  try {
+    const { data } = await api.get("/exercise/", {
+      headers: {
+        token: token,
+      },
+    });
+    return data;
+  } catch (error) {
+    console.log("error trying to get users", error);
+    throw error;
+  }
+};
 
 

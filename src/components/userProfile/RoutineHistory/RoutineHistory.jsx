@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 import lapiz from "/images/lapiz.webp";
 import EditRoutine from "../editRoutine/EditRoutine";
 
-const RoutineHistory = ({ functionShowEditRoutine }) => {
+const RoutineHistory = ({ functionShowEditRoutine, routineDate}) => {
   const { profileId } = useParams();
   const [myRoutines, setMyRoutines] = useState([]);
 
@@ -44,7 +44,7 @@ const RoutineHistory = ({ functionShowEditRoutine }) => {
         <div key={routineId}>
           <details name="historyRoutine">
             <summary className="fechaProfileUser">{niceDate}</summary>
-            <div>{displayExercises(routine.exercises)}</div>
+            <div>{displayExercises(routine.exercises, niceDate)}</div>
           </details>
           <hr />
         </div>
@@ -53,11 +53,13 @@ const RoutineHistory = ({ functionShowEditRoutine }) => {
     return formatRoutines;
   };
 
-  const openEditRoutine = () => {
+  const openEditRoutine = (date) => {
     functionShowEditRoutine(true);
+    routineDate(date)
   };
 
-  const displayExercises = (exercises) => {
+  const displayExercises = (exercises, niceDate) => {
+
     return (
       <>
         <div className="containerExerciseRoutineProfileFirst">
@@ -68,7 +70,7 @@ const RoutineHistory = ({ functionShowEditRoutine }) => {
             <p className="duracionHistory">Duración</p>
             <p className="comentarioHistory">Comentarios</p>
             {info?.role === "admin" && (
-              <button onClick={openEditRoutine} className="editarRoutine">
+              <button onClick={() => openEditRoutine(niceDate)} className="editarRoutine">
                 <img src={lapiz} alt="icono de lápiz para editar la rutina" />
               </button>
             )}
@@ -83,16 +85,16 @@ const RoutineHistory = ({ functionShowEditRoutine }) => {
               >
                 <hr className="separacionBarra" />
                 <div className="videoExerciseRoutine">
-                  <YoutubeEmbed embedId={getEmbedId(exercise.videoUrl)} />
+                  <YoutubeEmbed url={exercise.videoUrl} />
                 </div>
                 <div className="durationExercise">
-                  {exercise["exercise-routine"].duration}
+                  {exercise["exercise-routine"].series}
                 </div>
                 <div className="lapseExercise">
-                  {exercise["exercise-routine"].lapse}
+                  {exercise["exercise-routine"].duration}
                 </div>
                 <div className="seriesExercise">
-                  {exercise["exercise-routine"].series}
+                  {exercise["exercise-routine"].lapse}
                 </div>
                 <div className="observationsExercise">
                   {exercise["exercise-routine"].observations}
@@ -103,13 +105,6 @@ const RoutineHistory = ({ functionShowEditRoutine }) => {
         </div>
       </>
     );
-  };
-
-  const getEmbedId = (url) => {
-    const videoId = url.includes("youtu.be")
-      ? url.split("/").pop()
-      : url.split("v=")[1];
-    return videoId ? videoId : null;
   };
 
   return <div>{displayRoutines()}</div>;

@@ -72,6 +72,17 @@
     color: #1d4289;
   }
 
+  .backbuttonadmin {
+    margin-right:12%;
+    margin-top:5%;
+  
+  }
+
+  .backbuttonadmin > a {
+    text-decoration:none;
+    color:white;
+  }
+
 
   .containerSearchBar {
     margin-bottom: 20px; /* Espacio entre la barra de búsqueda y la tabla */

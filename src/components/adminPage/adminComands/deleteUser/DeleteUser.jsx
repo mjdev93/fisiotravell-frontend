@@ -16,6 +16,7 @@ const DeleteUser = ({ userId, onClose }) => {
       console.log(userId);
       await deleteUser(userId);
       onClose();
+      window.location.reload();
     } catch (error) {
       console.log("no se ha podido borrar el usuario", error);
     }
