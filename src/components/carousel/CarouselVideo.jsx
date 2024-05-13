@@ -26,7 +26,7 @@ export const CarouselVideo = () => {
           <iframe
             width="90%"
             height="180"
-            src="https://www.youtube.com/watch?v=eW6oZ62qrlQ"
+            src="https://www.youtube.com/embed/eW6oZ62qrlQ?si=iipGDSt3rCCUjjnX"
             frameBorder="0"
             allowFullScreen
             title="Ejercicio de la estrella"
